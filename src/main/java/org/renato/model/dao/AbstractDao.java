@@ -43,9 +43,8 @@ public abstract class AbstractDao<T> implements InterfaceDao<T> {
         try {
 
             Session session = hibernateSessionManager.getSession();
-            session.beginTransaction();
-            session.save(type);
-            session.flush();
+            session.saveOrUpdate(type);
+            hibernateSessionManager.commitTransaction();
 
         } catch (HibernateException ex) {
 
@@ -61,6 +60,7 @@ public abstract class AbstractDao<T> implements InterfaceDao<T> {
 
             Session session = hibernateSessionManager.getSession();
             session.save(type);
+            hibernateSessionManager.commitTransaction();
 
         } catch (HibernateException ex) {
 
@@ -74,9 +74,11 @@ public abstract class AbstractDao<T> implements InterfaceDao<T> {
 
             Session session = hibernateSessionManager.getSession();
             session.delete(type);
+            hibernateSessionManager.commitTransaction();
 
         } catch (HibernateException ex) {
 
+            hibernateSessionManager.roolBackTransaction();
             throw new TransactionException(ex.getMessage(), ex);
         }
 
