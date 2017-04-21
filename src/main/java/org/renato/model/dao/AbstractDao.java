@@ -5,6 +5,7 @@ import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.TransactionException;
 import org.renato.persistence.hibernate.HibernateSessionManager;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  * Created by Renato on 25/03/17.
@@ -37,6 +38,7 @@ public abstract class AbstractDao<T> implements InterfaceDao<T> {
         return hibernateSessionManager;
     }
 
+    @Transactional
     @Override
     public void create(T type) {
 
@@ -44,7 +46,6 @@ public abstract class AbstractDao<T> implements InterfaceDao<T> {
 
             Session session = hibernateSessionManager.getSession();
             session.saveOrUpdate(type);
-            hibernateSessionManager.commitTransaction();
 
         } catch (HibernateException ex) {
 
@@ -53,6 +54,7 @@ public abstract class AbstractDao<T> implements InterfaceDao<T> {
 
     }
 
+    @Transactional
     @Override
     public void update(T type) {
 
@@ -60,7 +62,6 @@ public abstract class AbstractDao<T> implements InterfaceDao<T> {
 
             Session session = hibernateSessionManager.getSession();
             session.save(type);
-            hibernateSessionManager.commitTransaction();
 
         } catch (HibernateException ex) {
 
@@ -68,13 +69,14 @@ public abstract class AbstractDao<T> implements InterfaceDao<T> {
         }
     }
 
+    @Transactional
     @Override
     public void delete(T type) {
+
         try {
 
             Session session = hibernateSessionManager.getSession();
             session.delete(type);
-            hibernateSessionManager.commitTransaction();
 
         } catch (HibernateException ex) {
 
@@ -84,6 +86,7 @@ public abstract class AbstractDao<T> implements InterfaceDao<T> {
 
     }
 
+    @Transactional
     @Override
     public T readByMail(String email) {
 
