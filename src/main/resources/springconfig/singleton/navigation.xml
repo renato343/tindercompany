@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="logedcontroller" class="org.renato.controller.LogedController">
+        <property name="userService" ref="cadetServiceimplementation"/>
+    </bean>
+
+
+    <bean id="logincontroller" class="org.renato.controller.LoginController">
+        <property name="userService" ref="cadetServiceimplementation"/>
+        <property name="navigation" ref="navigation"/>
+    </bean>
+
+    <!--<bean id="panelcontroller" class="org.academiadecodigo.bootcamp.controller.PanelController">-->
+    <!--<property name="navigation" ref="navigation"/>-->
+    <!--<property name="eventService" ref="eventServiceImplementatio"/>-->
+    <!--</bean>-->
+
+
+    <bean id="navigation" class="org.renato.Navigation">
+        <property name="controllers">
+            <map>
+                <entry key="LogedController" value-ref="logedcontroller"/>
+                <entry key="LoginController" value-ref="logincontroller"/>
+                <!--<entry key="PanelController" value-ref="panelcontroller"/>-->
+            </map>
+        </property>
+
+    </bean>
+</beans>
