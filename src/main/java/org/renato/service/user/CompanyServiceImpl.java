@@ -11,7 +11,7 @@ import java.util.List;
 /**
  * Created by codecadet on 23/03/17.
  */
-public class CadetServiceImpl implements UserService {
+public class CompanyServiceImpl implements UserService {
 
     private CadetDao cadetDao;
     private CompanyDao companyDao;
@@ -19,7 +19,7 @@ public class CadetServiceImpl implements UserService {
     private String userAuth;
     private List companies;
 
-    public CadetServiceImpl(CadetDao cadetDao, CompanyDao companyDao) {
+    public CompanyServiceImpl(CadetDao cadetDao, CompanyDao companyDao) {
         this.cadetDao = cadetDao;
         this.companyDao = companyDao;
     }

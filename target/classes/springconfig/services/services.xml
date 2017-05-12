@@ -4,7 +4,8 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean id="cadetServiceimplementation" class="org.renato.service.user.CadetServiceImpl">
-        <constructor-arg name="cadetDao" ref="hibernateUserDao"/>
+        <constructor-arg name="cadetDao" ref="hibernateCadetDao"/>
+        <constructor-arg name="companyDao" ref="hibernateCompanyDao"/>
     </bean>
 
 </beans>

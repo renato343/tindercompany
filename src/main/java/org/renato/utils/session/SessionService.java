@@ -1,4 +1,4 @@
-package org.renato.service.session;
+package org.renato.utils.session;
 
 /**
  * Created by Renato on 24/03/17.

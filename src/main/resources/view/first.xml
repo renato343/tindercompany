@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.renato.controller.LoginController">
+  <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.55484008789062" minWidth="10.0" prefWidth="53.00832748413086" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="210.5022735595703" minWidth="10.0" prefWidth="207.96217346191406" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="97.45989990234375" minWidth="10.0" prefWidth="39.03782653808594" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.80178833007812" minWidth="10.0" prefWidth="150.80178833007812" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.55484008789062" minWidth="10.0" prefWidth="49.198211669921875" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Button fx:id="companyButton" mnemonicParsing="false" onAction="#imCompany" prefHeight="55.0" prefWidth="205.0" text="I'M A COMPANY" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowSpan="2" />
+      <Button fx:id="cadetButton" mnemonicParsing="false" onAction="#imCadet" prefHeight="55.0" prefWidth="251.0" text="I'M A CADET" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowSpan="2" />
+   </children>
+</GridPane>

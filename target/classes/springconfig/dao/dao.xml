@@ -3,9 +3,14 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="hibernateUserDao" class="org.renato.model.dao.hibernate.HibernateUserDao">
+    <bean id="hibernateCadetDao" class="org.renato.model.dao.hibernate.HibernateCadetDao">
         <property name="hibernateSessionManager" ref="hibernateSessionManager"/>
     </bean>
+
+    <bean id="hibernateCompanyDao" class="org.renato.model.dao.hibernate.HibernateCompanyDao">
+        <property name="hibernateSessionManager" ref="hibernateSessionManager"/>
+    </bean>
+
 
 </beans>
 

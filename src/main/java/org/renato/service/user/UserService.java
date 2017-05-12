@@ -3,6 +3,8 @@ package org.renato.service.user;
 import org.renato.model.userTypes.Cadet;
 import org.renato.service.Service;
 
+import java.util.List;
+
 /**
  * Created by codecadet on 07/03/17.
  */
@@ -16,6 +18,12 @@ public interface UserService extends Service {
 
     Cadet findByMail(String name);
 
-    int count();
+    void findAll();
+
+    List getCompanies();
+
+    String getUserAuth ();
+
+
 
 }

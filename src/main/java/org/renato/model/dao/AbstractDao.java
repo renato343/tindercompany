@@ -7,6 +7,8 @@ import org.hibernate.TransactionException;
 import org.renato.persistence.hibernate.HibernateSessionManager;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 /**
  * Created by Renato on 25/03/17.
  */
@@ -98,4 +100,6 @@ public abstract class AbstractDao<T> implements InterfaceDao<T> {
         return object;
 
     }
+
+
 }

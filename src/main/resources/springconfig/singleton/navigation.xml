@@ -5,6 +5,7 @@
 
     <bean id="logedcontroller" class="org.renato.controller.LogedController">
         <property name="userService" ref="cadetServiceimplementation"/>
+        <property name="navigation" ref="navigation"/>
     </bean>
 
 

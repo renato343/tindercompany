@@ -5,13 +5,16 @@ import org.hibernate.Session;
 import org.renato.model.dao.AbstractDao;
 import org.renato.model.dao.CadetDao;
 import org.renato.model.userTypes.Cadet;
+import org.springframework.transaction.annotation.Transactional;
+
+import java.util.List;
 
 /**
  * Created by Renato on 25/03/17.
  */
-public class HibernateUserDao extends AbstractDao<Cadet> implements CadetDao {
+public class HibernateCadetDao extends AbstractDao<Cadet> implements CadetDao {
 
-    public HibernateUserDao() {
+    public HibernateCadetDao() {
         super(Cadet.class);
     }
 
@@ -25,5 +28,18 @@ public class HibernateUserDao extends AbstractDao<Cadet> implements CadetDao {
         Cadet object = (Cadet) query.uniqueResult();
         return object;
     }
+
+    @Transactional
+    @Override
+    public List all(){
+
+        Session session = getHibernateSessionManager().getSession();
+        Query query = session.createQuery("from Company");
+        List all = query.list();
+        return all;
+
+
+    }
+
 
 }

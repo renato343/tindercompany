@@ -25,19 +25,8 @@ public class LoginController implements Initializable {
     public LoginController() {
     }
 
-    public UserService getUserService() {
-        return userService;
-    }
-
     public void setUserService(UserService userService) {
-        System.out.println("set method!------------------------>" + userService);
         this.userService = userService;
-        System.out.println(this.userService);
-
-    }
-
-    public Navigation getNavigation() {
-        return navigation;
     }
 
     public void setNavigation(Navigation navigation) {
@@ -72,6 +61,13 @@ public class LoginController implements Initializable {
     private Label verificationText; // Value injected by FXMLLoader
 
     @FXML
+    private Button companyButton;
+
+    @FXML
+    private Button cadetButton;
+
+
+    @FXML
     public void onLogin(ActionEvent actionEvent) {
 
 
@@ -92,7 +88,7 @@ public class LoginController implements Initializable {
                 } else {
                     verificationText.setText("WELCOME");
                     verificationText.setVisible(true);
-                    Navigation.getInstance().loadScreen("Menu");
+                    navigation.loadScreen("Menu");
 
                 }
             }
@@ -140,6 +136,21 @@ public class LoginController implements Initializable {
             loginButton.setText("LOGIN");
             isLogin = true;
         }
+    }
+
+
+    @FXML
+    void imCadet(ActionEvent event) {
+
+        navigation.loadScreen("LoginController");
+
+    }
+
+    @FXML
+    void imCompany(ActionEvent event) {
+
+        navigation.loadScreen("LoginController");
+
     }
 
     public void initialize(URL url, ResourceBundle resourceBundle) {

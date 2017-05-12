@@ -1,4 +1,4 @@
-package org.renato.service.session;
+package org.renato.utils.session;
 
 import org.renato.model.dao.CadetDao;
 import org.renato.model.userTypes.Cadet;

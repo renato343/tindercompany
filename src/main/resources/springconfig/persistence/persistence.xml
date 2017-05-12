@@ -37,6 +37,7 @@
         <property name="mappingResources">
             <list>
                 <value>persistence/Cadet.hbm.xml</value>
+                <value>persistence/Company.hbm.xml</value>
             </list>
         </property>
     </bean>

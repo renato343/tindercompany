@@ -1,4 +1,6 @@
-package org.renato.service;
+package org.renato.utils;
+
+import org.renato.service.Service;
 
 import java.util.HashMap;
 import java.util.Map;

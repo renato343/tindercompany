@@ -10,7 +10,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 /**
  * Created by Renato on 18/03/17.
  */
-public class  Main extends Application {
+public class   Main extends Application {
 
     HibernateSessionManager hibernateSessionManager;
 
@@ -25,7 +25,8 @@ public class  Main extends Application {
         hibernateSessionManager = applicationContext.getBean("hibernateSessionManager",HibernateSessionManager.class);
 
         navigation.setStage(primaryStage);
-        navigation.loadScreen("LoginController");
+        navigation.loadScreen("first");
+
     }
 
     @Override
