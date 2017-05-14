@@ -31,15 +31,25 @@ public class HibernateCadetDao extends AbstractDao<Cadet> implements CadetDao {
 
     @Transactional
     @Override
-    public List all(){
+    public List allCompanys(){
 
         Session session = getHibernateSessionManager().getSession();
         Query query = session.createQuery("from Company");
         List all = query.list();
         return all;
-
-
     }
+
+    @Transactional
+    @Override
+    public List allCadets(){
+
+        Session session = getHibernateSessionManager().getSession();
+        Query query = session.createQuery("from Cadet");
+        List all = query.list();
+        return all;
+    }
+
+
 
 
 }

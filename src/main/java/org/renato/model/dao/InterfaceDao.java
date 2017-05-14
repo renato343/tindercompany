@@ -19,5 +19,7 @@ public interface InterfaceDao<T> {
 
     void delete(T type);
 
-    List<T> all();
+    List<T> allCompanys();
+
+    List<T> allCadets();
 }

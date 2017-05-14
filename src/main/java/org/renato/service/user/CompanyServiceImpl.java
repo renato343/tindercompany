@@ -33,7 +33,6 @@ public class CompanyServiceImpl implements UserService {
     @Override
     public boolean authenticate(String name, String pass) {
 
-
         if (cadetDao.readByName(name).getName().equals(name) &&
                 cadetDao.readByName(name).getPassword().equals(pass)) {
             isAuthenticate = true;
@@ -76,15 +75,19 @@ public class CompanyServiceImpl implements UserService {
     }
 
     @Transactional
-    @Override
     public void findAll() {
-        companies = cadetDao.all();
+        companies = cadetDao.allCompanys();
     }
 
     @Override
     public List getCompanies() {
         findAll();
         return companies;
+    }
+
+    @Override
+    public List getCadets() {
+        return null;
     }
 
     public String getUserAuth (){

@@ -18,12 +18,11 @@ public interface UserService extends Service {
 
     Cadet findByMail(String name);
 
-    void findAll();
-
     List getCompanies();
+
+    List getCadets();
 
     String getUserAuth ();
 
-
-
 }
+

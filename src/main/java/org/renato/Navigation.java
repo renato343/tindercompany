@@ -21,6 +21,15 @@ public class Navigation {
 
     private final int MIN_WIDTH = 600;
     private final int MIN_HEIGHT = 300;
+    private boolean isCompany;
+
+    public boolean getIsCompany() {
+        return isCompany;
+    }
+
+    public void setIsCompany(boolean company) {
+        isCompany = company;
+    }
 
     //org.renato.controller.Navigation History
     private LinkedList<Scene> scenes = new LinkedList<Scene>();

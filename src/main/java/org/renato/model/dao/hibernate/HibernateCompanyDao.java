@@ -31,7 +31,7 @@ public class HibernateCompanyDao extends AbstractDao<Company> implements Company
 
     @Transactional
     @Override
-    public List all(){
+    public List allCompanys(){
 
         Session session = getHibernateSessionManager().getSession();
         Query query = session.createQuery("from Cadet ");
@@ -42,6 +42,10 @@ public class HibernateCompanyDao extends AbstractDao<Company> implements Company
 
     }
 
+    @Override
+    public List<Company> allCadets() {
+        return null;
+    }
 
 
 }

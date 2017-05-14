@@ -21,8 +21,16 @@ public class LogedController implements Initializable {
     private Navigation navigation;
     private List<Company> companysList;
     private List<Cadet> cadetsList;
+    private boolean isCompany;
     int iterator = 0;
 
+    public boolean getisCompany() {
+        return isCompany;
+    }
+
+    public void setisCompany(boolean company) {
+        isCompany = company;
+    }
 
     @FXML
     private MenuItem logout;
@@ -52,6 +60,9 @@ public class LogedController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         welcomelabel.setText("Welcome " + userService.getUserAuth());
         companysList = userService.getCompanies();
+        cadetsList = userService.getCadets();
+        isCompany = navigation.getIsCompany();
+        System.out.println("iscompany value in Loged Controller is: " + isCompany);
 
     }
 
@@ -67,7 +78,7 @@ public class LogedController implements Initializable {
 
         //TODO CHECK IF WE REally want a previous button
 
-        if (iterator>=0 && iterator < companysList.size()) {
+        if (iterator >= 0 && iterator < companysList.size()) {
 
             textToShow.setText(companysList.get(iterator).getMotto());
             iterator--;
@@ -81,14 +92,29 @@ public class LogedController implements Initializable {
 
     public void next(ActionEvent actionEvent) {
 
-        if (companysList.size() > iterator) {
+        if (isCompany) {
 
-            textToShow.setText(companysList.get(iterator).getMotto());
-            iterator++;
+            if (companysList.size() > iterator) {
 
+                textToShow.setText(companysList.get(iterator).getMotto());
+                iterator++;
+
+            } else {
+                textToShow.setText("NO MORE ITEMS TO SHOW ");
+                iterator = 0;
+            }
         } else {
-            textToShow.setText("NO MORE ITEMS TO SHOW ");
-            iterator = 0;
+
+            if (cadetsList.size() > iterator) {
+
+                textToShow.setText(cadetsList.get(iterator).getMotto());
+                iterator++;
+
+            } else {
+                textToShow.setText("NO MORE ITEMS TO SHOW ");
+                iterator = 0;
+            }
+
         }
     }
 
@@ -101,7 +127,7 @@ public class LogedController implements Initializable {
     }
 
     public void logout(ActionEvent actionEvent) {
-        navigation.loadScreen("LoginController");
+        navigation.loadScreen("first");
     }
 
     public void quit(ActionEvent actionEvent) {

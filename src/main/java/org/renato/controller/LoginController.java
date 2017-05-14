@@ -13,9 +13,11 @@ import java.util.ResourceBundle;
 
 public class LoginController implements Initializable {
 
+
     private UserService userService;
     private Navigation navigation;
     private boolean isLogin = true;
+    private boolean isCompany;
 
     public LoginController(UserService userService, Navigation navigation) {
         this.userService = userService;
@@ -32,6 +34,9 @@ public class LoginController implements Initializable {
     public void setNavigation(Navigation navigation) {
         this.navigation = navigation;
     }
+
+    @FXML
+    public Label entityTypeLabel;
 
     @FXML // fx:id="loginButton"
     private Button loginButton; // Value injected by FXMLLoader
@@ -66,10 +71,8 @@ public class LoginController implements Initializable {
     @FXML
     private Button cadetButton;
 
-
     @FXML
     public void onLogin(ActionEvent actionEvent) {
-
 
         if (isLogin) {
 
@@ -138,23 +141,34 @@ public class LoginController implements Initializable {
         }
     }
 
-
     @FXML
     void imCadet(ActionEvent event) {
-
+        isCompany = false;
+        navigation.setIsCompany(isCompany);
+        entityTypeLabel.setText("CADET");
         navigation.loadScreen("LoginController");
-
     }
 
     @FXML
     void imCompany(ActionEvent event) {
 
+        isCompany = true;
+        navigation.setIsCompany(isCompany);
+        entityTypeLabel.setText("COMPANY");
         navigation.loadScreen("LoginController");
 
     }
 
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
+    }
 
+    public void setText2view (){
+
+        if(isCompany){
+
+        }else{
+
+        }
     }
 }

@@ -18,6 +18,7 @@ public class CadetServiceImpl implements UserService {
     private boolean isAuthenticate = false;
     private String userAuth;
     private List companies;
+    private List cadets;
 
     public CadetServiceImpl(CadetDao cadetDao, CompanyDao companyDao) {
         this.cadetDao = cadetDao;
@@ -77,14 +78,16 @@ public class CadetServiceImpl implements UserService {
 
     @Transactional
     @Override
-    public void findAll() {
-        companies = cadetDao.all();
+    public List getCompanies() {
+        companies = cadetDao.allCompanys();
+        return companies;
     }
 
+    @Transactional
     @Override
-    public List getCompanies() {
-        findAll();
-        return companies;
+    public List getCadets() {
+        cadets = cadetDao.allCadets();
+        return cadets;
     }
 
     public String getUserAuth (){
