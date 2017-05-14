@@ -35,8 +35,8 @@ public class LoginController implements Initializable {
         this.navigation = navigation;
     }
 
-    @FXML
-    public Label entityTypeLabel;
+    @FXML // fx:id="entityTypeLabel"
+    private Label entityTypeLabel; // Value injected by FXMLLoader
 
     @FXML // fx:id="loginButton"
     private Button loginButton; // Value injected by FXMLLoader
@@ -76,34 +76,37 @@ public class LoginController implements Initializable {
 
         if (isLogin) {
 
-            if (userService.findByName(cadetTextField.getText()) == null) {
+            if (!userService.findByName(cadetTextField.getText())) {
 
                 verificationText.setText("User doesn't exists");
                 verificationText.setVisible(true);
 
             } else {
 
-
                 if (!userService.authenticate(cadetTextField.getText(), passwordField.getText())) {
+
                     verificationText.setText(" WRONG PASSWORD");
                     verificationText.setVisible(true);
 
                 } else {
+
                     verificationText.setText("WELCOME");
                     verificationText.setVisible(true);
+                    navigation.setIsCompany(isCompany);
                     navigation.loadScreen("Menu");
-
                 }
             }
+
+
         } else {
 
             if (userService.findByMail(emailTextField.getText()) == null) {
 
-                if(cadetTextField.getText().isEmpty() || passwordField.getText().isEmpty() || emailTextField.getText().isEmpty() || mottoTexField.getText().isEmpty()) {
+                if (cadetTextField.getText().isEmpty() || passwordField.getText().isEmpty() || emailTextField.getText().isEmpty() || mottoTexField.getText().isEmpty()) {
 
                     verificationText.setText("All blank spaces, SHALL NOT BE EMPTY");
                     verificationText.setVisible(true);
-                }else {
+                } else {
 
                     userService.addUser(new Cadet(passwordField.getText(), emailTextField.getText(), cadetTextField.getText(), mottoTexField.getText(), "cadet"));
                     verificationText.setText("Account Successfully created");
@@ -115,6 +118,7 @@ public class LoginController implements Initializable {
                 verificationText.setVisible(true);
             }
         }
+
     }
 
     @FXML
@@ -142,33 +146,36 @@ public class LoginController implements Initializable {
     }
 
     @FXML
-    void imCadet(ActionEvent event) {
+    void imCadet() {
+
         isCompany = false;
-        navigation.setIsCompany(isCompany);
-        entityTypeLabel.setText("CADET");
+        userService.setCompany(isCompany);
         navigation.loadScreen("LoginController");
     }
 
     @FXML
-    void imCompany(ActionEvent event) {
+    void imCompany() {
 
         isCompany = true;
-        navigation.setIsCompany(isCompany);
-        entityTypeLabel.setText("COMPANY");
+        userService.setCompany(isCompany);
         navigation.loadScreen("LoginController");
 
     }
 
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
-    }
+        if (entityTypeLabel != null) {
 
-    public void setText2view (){
+            if (isCompany) {
 
-        if(isCompany){
+                entityTypeLabel.setText("Company");
 
-        }else{
+            } else {
 
+                entityTypeLabel.setText("Cadet");
+
+            }
         }
+
     }
 }

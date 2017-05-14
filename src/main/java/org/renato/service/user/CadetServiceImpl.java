@@ -16,9 +16,18 @@ public class CadetServiceImpl implements UserService {
     private CadetDao cadetDao;
     private CompanyDao companyDao;
     private boolean isAuthenticate = false;
+    private boolean isCompany;
     private String userAuth;
     private List companies;
     private List cadets;
+
+    public boolean isCompany() {
+        return isCompany;
+    }
+
+    public void setCompany(boolean company) {
+        isCompany = company;
+    }
 
     public CadetServiceImpl(CadetDao cadetDao, CompanyDao companyDao) {
         this.cadetDao = cadetDao;
@@ -35,15 +44,30 @@ public class CadetServiceImpl implements UserService {
     public boolean authenticate(String name, String pass) {
 
 
-        if (cadetDao.readByName(name).getName().equals(name) &&
-                cadetDao.readByName(name).getPassword().equals(pass)) {
-            isAuthenticate = true;
-            userAuth = name;
-        } else {
-            isAuthenticate = false;
+        if (isCompany) {
+
+            if (companyDao.readByName(name).getName().equals(name) &&
+                    companyDao.readByName(name).getPassword().equals(pass)) {
+                isAuthenticate = true;
+                userAuth = name;
+            } else {
+                isAuthenticate = false;
+
+            }
+        }else {
+
+            if(cadetDao.readByName(name).getName().equals(name) &&
+                    cadetDao.readByName(name).getPassword().equals(pass)){
+                isAuthenticate = true;
+                userAuth = name;
+            }else {
+                isAuthenticate = false;
+            }
+
 
         }
         return isAuthenticate;
+
     }
 
     @Transactional
@@ -59,11 +83,26 @@ public class CadetServiceImpl implements UserService {
 
     @Transactional
     @Override
-    public Cadet findByName(String name) {
+    public boolean findByName(String name) {
 
-        Cadet cadet;
-        cadet = cadetDao.readByName(name);
-        return cadet;
+        if(isCompany){
+
+            if(companyDao.readByName(name)==null){
+                return false;
+            }else {
+                return true;
+            }
+
+        }else {
+
+            if(cadetDao.readByName(name)==null){
+                return false;
+            }else {
+                return true;
+            }
+
+        }
+
 
     }
 
@@ -79,18 +118,20 @@ public class CadetServiceImpl implements UserService {
     @Transactional
     @Override
     public List getCompanies() {
-        companies = cadetDao.allCompanys();
+
+        companies = companyDao.allCompanys();
         return companies;
     }
 
     @Transactional
     @Override
     public List getCadets() {
+
         cadets = cadetDao.allCadets();
         return cadets;
     }
 
-    public String getUserAuth (){
+    public String getUserAuth() {
         return userAuth;
     }
 

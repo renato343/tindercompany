@@ -10,11 +10,15 @@ import java.util.List;
  */
 public interface UserService extends Service {
 
+    public boolean isCompany();
+
+    public void setCompany(boolean company);
+
     boolean authenticate(String name, String pass);
 
     void addUser(Cadet userType);
 
-    Cadet findByName(String name);
+    boolean findByName(String name);
 
     Cadet findByMail(String name);
 

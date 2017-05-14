@@ -19,6 +19,7 @@ public class HibernateCompanyDao extends AbstractDao<Company> implements Company
     }
 
 
+    @Transactional
     @Override
     public Company readByName(String name) {
 
@@ -34,18 +35,9 @@ public class HibernateCompanyDao extends AbstractDao<Company> implements Company
     public List allCompanys(){
 
         Session session = getHibernateSessionManager().getSession();
-        Query query = session.createQuery("from Cadet ");
+        Query query = session.createQuery("from Company ");
         List all = query.list();
-        System.out.println("IN ALL METHOD IN COMAPNYDAO - LIST CONTENT ----- " + all);
         return all;
-
-
     }
-
-    @Override
-    public List<Company> allCadets() {
-        return null;
-    }
-
 
 }

@@ -19,6 +19,7 @@ public class HibernateCadetDao extends AbstractDao<Cadet> implements CadetDao {
     }
 
 
+    @Transactional
     @Override
     public Cadet readByName(String name) {
 
@@ -27,16 +28,6 @@ public class HibernateCadetDao extends AbstractDao<Cadet> implements CadetDao {
         query.setString("name", name);
         Cadet object = (Cadet) query.uniqueResult();
         return object;
-    }
-
-    @Transactional
-    @Override
-    public List allCompanys(){
-
-        Session session = getHibernateSessionManager().getSession();
-        Query query = session.createQuery("from Company");
-        List all = query.list();
-        return all;
     }
 
     @Transactional

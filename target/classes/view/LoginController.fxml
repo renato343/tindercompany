@@ -50,7 +50,7 @@
       <TextField fx:id="emailTextField" visible="false" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="5" />
        <TextField fx:id="mottoTexField" visible="false" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="6" />
       <Hyperlink fx:id="registerLink" onAction="#onRegister" text="Register" GridPane.columnIndex="3" GridPane.rowIndex="10" />
-      <Label fx:id="entityTypeLabel" text="Code_Cadet_" textAlignment="RIGHT" GridPane.columnIndex="1" GridPane.rowIndex="3">
+      <Label fx:id="entityTypeLabel" text="name" textAlignment="RIGHT" visible="true" GridPane.columnIndex="1" GridPane.rowIndex="3">
          <font>
             <Font size="15.0" />
          </font>

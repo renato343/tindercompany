@@ -8,7 +8,6 @@
         <property name="navigation" ref="navigation"/>
     </bean>
 
-
     <bean id="logincontroller" class="org.renato.controller.LoginController">
         <property name="userService" ref="cadetServiceimplementation"/>
         <property name="navigation" ref="navigation"/>

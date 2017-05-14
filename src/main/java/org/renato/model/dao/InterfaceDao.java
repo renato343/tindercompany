@@ -1,7 +1,5 @@
 package org.renato.model.dao;
 
-import java.util.List;
-
 /**
  * Created by Renato on 25/03/17.
  */
@@ -18,8 +16,4 @@ public interface InterfaceDao<T> {
     void update(T type);
 
     void delete(T type);
-
-    List<T> allCompanys();
-
-    List<T> allCadets();
 }

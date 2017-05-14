@@ -61,8 +61,7 @@ public class LogedController implements Initializable {
         welcomelabel.setText("Welcome " + userService.getUserAuth());
         companysList = userService.getCompanies();
         cadetsList = userService.getCadets();
-        isCompany = navigation.getIsCompany();
-        System.out.println("iscompany value in Loged Controller is: " + isCompany);
+        this.isCompany = navigation.getIsCompany();
 
     }
 
@@ -92,7 +91,7 @@ public class LogedController implements Initializable {
 
     public void next(ActionEvent actionEvent) {
 
-        if (isCompany) {
+        if (!isCompany) {
 
             if (companysList.size() > iterator) {
 

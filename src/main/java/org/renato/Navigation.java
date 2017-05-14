@@ -79,7 +79,6 @@ public class Navigation {
             fxmlLoader.setControllerFactory(new Callback<Class<?>, Object>() {
                 @Override
                 public Object call(Class<?> param) {
-                    System.out.println(param.getSimpleName());
 
                     return controllers.get(param.getSimpleName());
                 }
