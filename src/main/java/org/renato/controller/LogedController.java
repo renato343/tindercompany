@@ -75,8 +75,6 @@ public class LogedController implements Initializable {
 
     public void previous(ActionEvent actionEvent) {
 
-        //TODO CHECK IF WE REally want a previous button
-
         if (iterator >= 0 && iterator < companysList.size()) {
 
             textToShow.setText(companysList.get(iterator).getMotto());
@@ -123,6 +121,17 @@ public class LogedController implements Initializable {
     }
 
     public void match(ActionEvent actionEvent) {
+
+        if(isCompany){
+
+            //TODO
+
+        }
+        else {
+
+
+        }
+
     }
 
     public void logout(ActionEvent actionEvent) {

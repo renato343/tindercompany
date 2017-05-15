@@ -23,7 +23,9 @@ public interface UserService extends Service {
 
     boolean findByName(String name);
 
-    Cadet findByMail(String name);
+    Cadet findCadetByMail(String name);
+
+    Company findCompanyByMail(String mail);
 
     List getCompanies();
 
@@ -31,5 +33,6 @@ public interface UserService extends Service {
 
     String getUserAuth ();
 
+    void matchCadet(Cadet byMail);
 }
 

@@ -3,10 +3,7 @@
   <component name="FacetManager">
     <facet type="hibernate" name="Hibernate">
       <configuration>
-        <datasource-map>
-          <unit-entry name="persistence:hibernate.cfg.xml" />
-          <unit-entry name="sessionFactory" value="dataSource" />
-        </datasource-map>
+        <datasource-map />
         <naming-strategy-map />
         <deploymentDescriptor name="hibernate.cfg.xml" url="file://$MODULE_DIR$/src/main/resources/persistence/hibernate.cfg.xml" />
       </configuration>
@@ -14,11 +11,11 @@
     <facet type="Spring" name="Spring">
       <configuration>
         <fileset id="fileset" name="Spring Application Context" removed="false">
-          <file>file://$MODULE_DIR$/src/main/resources/springconfig/services/services.xml</file>
           <file>file://$MODULE_DIR$/src/main/resources/springconfig/singleton/navigation.xml</file>
-          <file>file://$MODULE_DIR$/src/main/resources/springconfig/dao/dao.xml</file>
-          <file>file://$MODULE_DIR$/src/main/resources/springconfig/persistence/persistence.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/springconfig/services/services.xml</file>
           <file>file://$MODULE_DIR$/src/main/resources/springconfig/spring-config.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/springconfig/persistence/persistence.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/springconfig/dao/dao.xml</file>
         </fileset>
       </configuration>
     </facet>

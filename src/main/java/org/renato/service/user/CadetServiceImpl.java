@@ -120,9 +120,18 @@ public class CadetServiceImpl implements UserService {
 
     @Transactional
     @Override
-    public Cadet findByMail(String mail) {
+    public Cadet findCadetByMail(String mail) {
 
         Cadet userType = cadetDao.readByMail(mail);
+        return userType;
+
+    }
+
+    @Transactional
+    @Override
+    public Company findCompanyByMail(String mail) {
+
+        Company userType = companyDao.readByMail(mail);
         return userType;
 
     }
@@ -145,6 +154,13 @@ public class CadetServiceImpl implements UserService {
 
     public String getUserAuth() {
         return userAuth;
+    }
+
+
+    @Override
+    public void matchCadet(Cadet byMail) {
+
+
     }
 
 }

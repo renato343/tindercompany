@@ -101,7 +101,7 @@ public class LoginController implements Initializable {
 
         } else {
 
-            if (userService.findByMail(emailTextField.getText()) == null) {
+            if (userService.findCadetByMail(emailTextField.getText()) == null) {
 
                 if (cadetTextField.getText().isEmpty() || passwordField.getText().isEmpty() || emailTextField.getText().isEmpty() || mottoTexField.getText().isEmpty()) {
 
