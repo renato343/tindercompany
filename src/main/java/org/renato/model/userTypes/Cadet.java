@@ -1,6 +1,7 @@
 package org.renato.model.userTypes;
 
 import java.io.File;
+import java.util.Set;
 
 /**
  * Created by Renato on 25/03/17.
@@ -11,6 +12,9 @@ public class Cadet  {
     private String password;
     private String email;
     private String name;
+
+    /**List with companys liked**/
+    private Set<Company> companySet;
 
     /** phrase to describe */
     private String motto;
@@ -86,5 +90,13 @@ public class Cadet  {
 
     public void setType(String type) {
         this.type = type;
+    }
+
+    public Set<Company> getCompanySet() {
+        return companySet;
+    }
+
+    public void setCompanySet(Set<Company> companySet) {
+        this.companySet = companySet;
     }
 }

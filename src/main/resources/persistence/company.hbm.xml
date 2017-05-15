@@ -4,7 +4,7 @@
         "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
 
-    <class name="org.renato.model.userTypes.Cadet" table="cadets">
+    <class name="org.renato.model.userTypes.Company" table="companys">
         <id name="id" column="id" type="int">
             <generator class="identity"/>
         </id>
@@ -13,6 +13,10 @@
         <property name="name" column="name" type="string"/>
         <property name="password" column="password" type="string"/>
         <property name="motto" column="motto" type="string"/>
+        <set name="cadetSet" table="cadet_company" fetch="select" cascade="all">
+            <key column="company_id"/>
+            <many-to-many class="org.renato.model.userTypes.Cadet" column="id"/>
+        </set>
 
     </class>
 

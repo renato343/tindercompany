@@ -17,7 +17,8 @@
         <property name="hbm2ddl.auto">create</property>
         <!-- Show generated SQL for debug purposes -->
         <property name="hibernate.show_sql">true</property>
-        <mapping resource="persistence/Cadet.hbm.xml"/>
+        <mapping resource="persistence/company.hbm.xml"/>
+        <mapping resource="persistence/cadet.hbm.xml"/>
 
     </session-factory>
 </hibernate-configuration>
