@@ -3,6 +3,7 @@ package org.renato.service.user;
 import org.renato.model.dao.CadetDao;
 import org.renato.model.dao.CompanyDao;
 import org.renato.model.userTypes.Cadet;
+import org.renato.model.userTypes.Company;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
@@ -72,10 +73,21 @@ public class CadetServiceImpl implements UserService {
 
     @Transactional
     @Override
-    public void addUser(Cadet userType) {
+    public void addCadet(Cadet userType) {
 
         if (cadetDao.readByMail(userType.getEmail()) == null) {
             cadetDao.create(userType);
+        }
+
+
+    }
+
+    @Transactional
+    @Override
+    public void addCompany(Company userType) {
+
+        if (companyDao.readByMail(userType.getEmail()) == null) {
+            companyDao.create(userType);
         }
 
 

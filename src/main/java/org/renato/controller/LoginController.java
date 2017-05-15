@@ -6,6 +6,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import org.renato.Navigation;
 import org.renato.model.userTypes.Cadet;
+import org.renato.model.userTypes.Company;
 import org.renato.service.user.UserService;
 
 import java.net.URL;
@@ -108,9 +109,18 @@ public class LoginController implements Initializable {
                     verificationText.setVisible(true);
                 } else {
 
-                    userService.addUser(new Cadet(passwordField.getText(), emailTextField.getText(), cadetTextField.getText(), mottoTexField.getText(), "cadet"));
-                    verificationText.setText("Account Successfully created");
-                    verificationText.setVisible(true);
+                    if(!isCompany) {
+
+                        userService.addCadet(new Cadet(passwordField.getText(), emailTextField.getText(), cadetTextField.getText(), mottoTexField.getText(), "cadet"));
+                        verificationText.setText("Account Successfully created");
+                        verificationText.setVisible(true);
+
+                    }else{
+
+                        userService.addCompany(new Company(passwordField.getText(), emailTextField.getText(), cadetTextField.getText(), mottoTexField.getText(), "company"));
+                        verificationText.setText("Account Successfully created");
+                        verificationText.setVisible(true);
+                    }
                 }
 
             } else {

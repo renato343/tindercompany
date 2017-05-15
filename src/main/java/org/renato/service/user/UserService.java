@@ -1,6 +1,7 @@
 package org.renato.service.user;
 
 import org.renato.model.userTypes.Cadet;
+import org.renato.model.userTypes.Company;
 import org.renato.service.Service;
 
 import java.util.List;
@@ -16,7 +17,9 @@ public interface UserService extends Service {
 
     boolean authenticate(String name, String pass);
 
-    void addUser(Cadet userType);
+    void addCadet(Cadet userType);
+
+    void addCompany(Company userType);
 
     boolean findByName(String name);
 

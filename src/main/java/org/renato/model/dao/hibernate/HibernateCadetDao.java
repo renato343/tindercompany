@@ -40,7 +40,4 @@ public class HibernateCadetDao extends AbstractDao<Cadet> implements CadetDao {
         return all;
     }
 
-
-
-
 }
