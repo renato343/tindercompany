@@ -24,13 +24,6 @@ public class LogedController implements Initializable {
     private boolean isCompany;
     int iterator = 0;
 
-    public boolean getisCompany() {
-        return isCompany;
-    }
-
-    public void setisCompany(boolean company) {
-        isCompany = company;
-    }
 
     @FXML
     private MenuItem logout;
@@ -73,21 +66,57 @@ public class LogedController implements Initializable {
         this.navigation = navigation;
     }
 
+    public boolean getisCompany() {
+        return isCompany;
+    }
+
+    public void setisCompany(boolean company) {
+        isCompany = company;
+    }
+
     public void previous(ActionEvent actionEvent) {
 
-        if (iterator >= 0 && iterator < companysList.size()) {
+        //TODO check what is happening when iterator is at 0 or under
 
-            textToShow.setText(companysList.get(iterator).getMotto());
-            iterator--;
-
-        } else {
+        if(iterator<=0){
             textToShow.setText("NO MORE ITEMS TO SHOW ");
-            iterator = 0;
+            iterator=0;
+        }
+
+        if (!isCompany) {
+
+            if (iterator >= 0 && iterator < companysList.size()) {
+
+                textToShow.setText(companysList.get(iterator).getMotto());
+                iterator--;
+
+            } else {
+                textToShow.setText("NO MORE ITEMS TO SHOW ");
+                iterator = 0;
+            }
+        }else {
+
+            if (iterator >= 0 && iterator < cadetsList.size()) {
+
+                textToShow.setText(cadetsList.get(iterator).getMotto());
+                iterator--;
+
+            } else {
+                textToShow.setText("NO MORE ITEMS TO SHOW ");
+                iterator = 0;
+            }
+
         }
 
     }
 
     public void next(ActionEvent actionEvent) {
+
+        //TODO check what is happening when iterator is at 0 or under
+        if(iterator<=0){
+            textToShow.setText("NO MORE ITEMS TO SHOW ");
+            iterator=0;
+        }
 
         if (!isCompany) {
 
@@ -117,17 +146,22 @@ public class LogedController implements Initializable {
 
     public void moreInfo(ActionEvent actionEvent) {
 
+        if (isCompany) {
+
+            textToShow.setText(cadetsList.get(iterator - 1).getName());
+        } else {
+
+            textToShow.setText(cadetsList.get(iterator - 1).getName());
+        }
+
 
     }
 
     public void match(ActionEvent actionEvent) {
 
-        if(isCompany){
+        if (isCompany) {
 
-            //TODO
-
-        }
-        else {
+        } else {
 
 
         }
