@@ -5,6 +5,7 @@ import org.renato.persistence.TransactionManager;
 /**
  * Created by codecadet on 23/03/17.
  */
+
 public class HibernateTransactionManager implements TransactionManager{
 
 

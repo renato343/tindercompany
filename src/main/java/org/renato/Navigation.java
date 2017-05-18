@@ -6,6 +6,8 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.util.Callback;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
 
 import java.io.IOException;
 import java.util.HashMap;
@@ -15,6 +17,8 @@ import java.util.Map;
 /**
  * Created by Renato on 18/03/17.
  */
+@Component
+@Scope (value = "singleton")
 public class Navigation {
 
     private static Navigation instance = null;

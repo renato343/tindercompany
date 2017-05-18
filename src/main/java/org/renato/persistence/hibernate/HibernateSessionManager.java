@@ -2,14 +2,18 @@ package org.renato.persistence.hibernate;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 
 /**
  * Created by Renato on 26/03/17.
  */
+
 public class HibernateSessionManager {
 
+    @Autowired
     private static SessionFactory sessionFactory;
 
+    @Autowired
     public HibernateSessionManager(SessionFactory sessionFactory) {
         this.sessionFactory = sessionFactory;
     }

@@ -1,47 +1,56 @@
 package org.renato.model.userTypes;
 
-import java.io.File;
+import javax.persistence.*;
 import java.util.Set;
 
 /**
  * Created by Renato on 25/03/17.
  */
+
+@Entity
+@Table(name = "cadets")
 public class Cadet  {
 
-    private Integer Id;
-    private String password;
+    @Id
+    @Column(name = "cadet_id")
+    @GeneratedValue ( strategy = GenerationType.IDENTITY)
+    private Integer cadet_Id;
+
+    @Column (name = "email")
     private String email;
+
+    @Column (name = "name")
     private String name;
 
-    /**List with companys liked**/
-    private Set<Company> companySet;
+    @Column(name = "password")
+    private String password;
 
     /** phrase to describe */
+
+    @Column (name = "motto")
     private String motto;
 
-    /** cv or company flyer */
-    private File file;
-
-    /** Is a company or a cadet */
-    private String type;
+    /**List with companys liked**/
+    @ManyToMany (targetEntity = Company.class, fetch = FetchType.EAGER)
+    @JoinTable(name = "cadet_company", joinColumns = {@JoinColumn(name = "cadet_id")}, inverseJoinColumns = {@JoinColumn(name = "company_id")})
+    private Set<Company> companySet;
 
     public Cadet() {
     }
 
-    public Cadet(String password, String email, String name, String motto, String type) {
+    public Cadet(String password, String email, String name, String motto) {
         this.password = password;
         this.email = email;
         this.name = name;
         this.motto = motto;
-        this.type = type;
     }
 
-    public Integer getId() {
-        return Id;
+    public Integer getCadet_Id() {
+        return cadet_Id;
     }
 
-    public void setId(Integer id) {
-        Id = id;
+    public void setCadet_Id(Integer cadet_Id) {
+        this.cadet_Id = cadet_Id;
     }
 
     public String getPassword() {
@@ -74,22 +83,6 @@ public class Cadet  {
 
     public void setMotto(String motto) {
         this.motto = motto;
-    }
-
-    public File getFile() {
-        return file;
-    }
-
-    public void setFile(File file) {
-        this.file = file;
-    }
-
-    public String getType() {
-        return type;
-    }
-
-    public void setType(String type) {
-        this.type = type;
     }
 
     public Set<Company> getCompanySet() {

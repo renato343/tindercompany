@@ -4,6 +4,8 @@ import org.renato.model.dao.CadetDao;
 import org.renato.model.dao.CompanyDao;
 import org.renato.model.userTypes.Cadet;
 import org.renato.model.userTypes.Company;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
@@ -12,25 +14,28 @@ import java.util.List;
 /**
  * Created by codecadet on 23/03/17.
  */
-public class CadetServiceImpl implements UserService {
+@Service
+public class UserServiceImpl implements UserService {
 
+    @Autowired
     private CadetDao cadetDao;
+
+    @Autowired
     private CompanyDao companyDao;
-    private boolean isAuthenticate = false;
-    private boolean isCompany;
+
+    private Cadet cadetLogged;
+    private Company companyLogged;
     private String userAuth;
+
+    private boolean isAuthenticate = false;
+    private boolean isCompany = true;
+
     private List companies;
     private List cadets;
 
-    public boolean isCompany() {
-        return isCompany;
-    }
 
-    public void setCompany(boolean company) {
-        isCompany = company;
-    }
-
-    public CadetServiceImpl(CadetDao cadetDao, CompanyDao companyDao) {
+    @Autowired
+    public UserServiceImpl(CadetDao cadetDao, CompanyDao companyDao) {
         this.cadetDao = cadetDao;
         this.companyDao = companyDao;
     }
@@ -38,6 +43,30 @@ public class CadetServiceImpl implements UserService {
     @Override
     public String getName() {
         return UserService.class.getSimpleName();
+    }
+
+    public Cadet getCadetLogged() {
+        return cadetLogged;
+    }
+
+    public void setCadetLogged(Cadet cadetLogged) {
+        this.cadetLogged = cadetLogged;
+    }
+
+    public Company getCompanyLogged() {
+        return companyLogged;
+    }
+
+    public void setCompanyLogged(Company companyLogged) {
+        this.companyLogged = companyLogged;
+    }
+
+    public boolean getIsCompany() {
+        return isCompany;
+    }
+
+    public void setIsCompany(boolean company) {
+        isCompany = company;
     }
 
     @Transactional
@@ -55,13 +84,13 @@ public class CadetServiceImpl implements UserService {
                 isAuthenticate = false;
 
             }
-        }else {
+        } else {
 
-            if(cadetDao.readByName(name).getName().equals(name) &&
-                    cadetDao.readByName(name).getPassword().equals(pass)){
+            if (cadetDao.readByName(name).getName().equals(name) &&
+                    cadetDao.readByName(name).getPassword().equals(pass)) {
                 isAuthenticate = true;
                 userAuth = name;
-            }else {
+            } else {
                 isAuthenticate = false;
             }
 
@@ -95,27 +124,53 @@ public class CadetServiceImpl implements UserService {
 
     @Transactional
     @Override
-    public boolean findByName(String name) {
+    public void updateCadet(Cadet cadetLogged){
 
-        if(isCompany){
+        cadetDao.update(cadetLogged);
+    }
 
-            if(companyDao.readByName(name)==null){
+    @Transactional
+    @Override
+    public void updateCompany(Company companyLogged){
+        companyDao.update(companyLogged);
+    }
+
+    @Transactional
+    @Override
+    public boolean exists(String name) {
+
+        if (isCompany) {
+
+            if (companyDao.readByName(name) == null) {
                 return false;
-            }else {
+            } else {
                 return true;
             }
 
-        }else {
+        } else {
 
-            if(cadetDao.readByName(name)==null){
+            if (cadetDao.readByName(name) == null) {
                 return false;
-            }else {
+            } else {
                 return true;
             }
 
         }
 
 
+    }
+
+    @Transactional
+    @Override
+    public Cadet findCadetByName(String text) {
+
+        return cadetDao.readByName(text);
+    }
+
+    @Transactional
+    @Override
+    public Company findCompanyByName(String text) {
+        return companyDao.readByName(text);
     }
 
     @Transactional
@@ -140,7 +195,8 @@ public class CadetServiceImpl implements UserService {
     @Override
     public List getCompanies() {
 
-        companies = companyDao.allCompanys();
+        companies = companyDao.all();
+//        companies = companyDao.allCompanies();
         return companies;
     }
 
@@ -148,19 +204,11 @@ public class CadetServiceImpl implements UserService {
     @Override
     public List getCadets() {
 
-        cadets = cadetDao.allCadets();
+        cadets = cadetDao.all();
+
+//        cadets = cadetDao.allCadets();
         return cadets;
     }
 
-    public String getUserAuth() {
-        return userAuth;
-    }
-
-
-    @Override
-    public void matchCadet(Cadet byMail) {
-
-
-    }
 
 }

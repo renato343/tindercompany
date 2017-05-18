@@ -1,25 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd">
 
-    <bean id="logedcontroller" class="org.renato.controller.LogedController">
-        <property name="userService" ref="cadetServiceimplementation"/>
-        <property name="navigation" ref="navigation"/>
-    </bean>
-
-    <bean id="logincontroller" class="org.renato.controller.LoginController">
-        <property name="userService" ref="cadetServiceimplementation"/>
-        <property name="navigation" ref="navigation"/>
-    </bean>
-
-    <!--<bean id="panelcontroller" class="org.academiadecodigo.bootcamp.controller.PanelController">-->
-    <!--<property name="navigation" ref="navigation"/>-->
-    <!--<property name="eventService" ref="eventServiceImplementatio"/>-->
-    <!--</bean>-->
-
-
-    <bean id="navigation" class="org.renato.Navigation">
+    <bean id="navigation" class="org.renato.Navigation" scope="singleton">
         <property name="controllers">
             <map>
                 <entry key="LogedController" value-ref="logedcontroller"/>
@@ -29,4 +15,22 @@
         </property>
 
     </bean>
+
+    <bean id="logedcontroller" class="org.renato.controller.LogedController" autowire="constructor">
+        <!--<property name="userService" ref="cadetServiceimplementation"/>-->
+        <!--<property name="navigation" ref="navigation"/>-->
+    </bean>
+
+    <bean id="logincontroller" class="org.renato.controller.LoginController" autowire="constructor">
+        <!--<property name="userService" ref="cadetServiceimplementation"/>-->
+        <!--<property name="navigation" ref="navigation"/>-->
+    </bean>
+
 </beans>
+
+
+        <!--TO USE WHEN THERE'S A MYSETTINGS CONTROLLER AND VIEW-->
+        <!--<bcadet_company_dn id="panelcontroller" class="org.academiadecodigo.bootcamp.controller.PanelController">-->
+        <!--<property name="navigation" ref="navigation"/>-->
+        <!--<property name="eventService" ref="eventServiceImplementatio"/>-->
+        <!--</bean>-->

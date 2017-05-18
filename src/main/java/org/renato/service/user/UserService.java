@@ -11,9 +11,17 @@ import java.util.List;
  */
 public interface UserService extends Service {
 
-    public boolean isCompany();
+    public Cadet getCadetLogged();
 
-    public void setCompany(boolean company);
+    public void setCadetLogged(Cadet cadetLogged);
+
+    public Company getCompanyLogged();
+
+    public void setCompanyLogged(Company companyLogged);
+
+    public boolean getIsCompany();
+
+    public void setIsCompany(boolean company);
 
     boolean authenticate(String name, String pass);
 
@@ -21,7 +29,7 @@ public interface UserService extends Service {
 
     void addCompany(Company userType);
 
-    boolean findByName(String name);
+    boolean exists(String name);
 
     Cadet findCadetByMail(String name);
 
@@ -31,8 +39,13 @@ public interface UserService extends Service {
 
     List getCadets();
 
-    String getUserAuth ();
+    Cadet findCadetByName(String text);
 
-    void matchCadet(Cadet byMail);
+    Company findCompanyByName(String text);
+
+    void updateCadet(Cadet cadetLogged);
+
+    void updateCompany(Company companyLogged);
+
 }
 

@@ -4,7 +4,10 @@ import org.hibernate.HibernateException;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.TransactionException;
+import org.renato.model.userTypes.Cadet;
 import org.renato.persistence.hibernate.HibernateSessionManager;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
@@ -12,8 +15,10 @@ import java.util.List;
 /**
  * Created by Renato on 25/03/17.
  */
+@Repository
 public abstract class AbstractDao<T> implements InterfaceDao<T> {
 
+    @Autowired
     HibernateSessionManager hibernateSessionManager;
     Class<T> classtype;
 
@@ -22,6 +27,7 @@ public abstract class AbstractDao<T> implements InterfaceDao<T> {
         this.hibernateSessionManager = hibernateSessionManager;
     }
 
+    @Autowired
     public void setHibernateSessionManager(HibernateSessionManager hibernateSessionManager) {
         this.hibernateSessionManager = hibernateSessionManager;
     }
@@ -63,7 +69,7 @@ public abstract class AbstractDao<T> implements InterfaceDao<T> {
         try {
 
             Session session = hibernateSessionManager.getSession();
-            session.save(type);
+            session.update(type);
 
         } catch (HibernateException ex) {
 
@@ -99,6 +105,29 @@ public abstract class AbstractDao<T> implements InterfaceDao<T> {
         T object = (T) query.uniqueResult();
         return object;
 
+    }
+
+    @Transactional
+    @Override
+    public T readByName(String name) {
+
+        Session session = HibernateSessionManager.getSession();
+        session.beginTransaction();
+        Query query = session.createQuery("from " + classtype.getSimpleName() + " where name = :name");
+        query.setString("name", name);
+        T object = (T) query.uniqueResult();
+        return object;
+
+    }
+
+    @Transactional
+    @Override
+    public List all(){
+
+        Session session = getHibernateSessionManager().getSession();
+        Query query = session.createQuery("from " + classtype.getSimpleName());
+        List all = query.list();
+        return all;
     }
 
 

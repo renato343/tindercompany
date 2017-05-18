@@ -8,32 +8,34 @@ import org.renato.Navigation;
 import org.renato.model.userTypes.Cadet;
 import org.renato.model.userTypes.Company;
 import org.renato.service.user.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 
 import java.net.URL;
 import java.util.ResourceBundle;
 
+@Controller
 public class LoginController implements Initializable {
 
-
+    @Autowired
     private UserService userService;
+    @Autowired
     private Navigation navigation;
-    private boolean isLogin = true;
-    private boolean isCompany;
 
+    private int myId;
+
+    private boolean isLogin = true;
+
+    private boolean isCompany = true;
+
+
+    @Autowired
     public LoginController(UserService userService, Navigation navigation) {
         this.userService = userService;
         this.navigation = navigation;
     }
 
     public LoginController() {
-    }
-
-    public void setUserService(UserService userService) {
-        this.userService = userService;
-    }
-
-    public void setNavigation(Navigation navigation) {
-        this.navigation = navigation;
     }
 
     @FXML // fx:id="entityTypeLabel"
@@ -77,7 +79,7 @@ public class LoginController implements Initializable {
 
         if (isLogin) {
 
-            if (!userService.findByName(cadetTextField.getText())) {
+            if (!userService.exists(cadetTextField.getText())) {
 
                 verificationText.setText("User doesn't exists");
                 verificationText.setVisible(true);
@@ -93,7 +95,17 @@ public class LoginController implements Initializable {
 
                     verificationText.setText("WELCOME");
                     verificationText.setVisible(true);
-                    navigation.setIsCompany(isCompany);
+
+                    if(!isCompany){
+
+                        userService.setCadetLogged(userService.findCadetByName(cadetTextField.getText()));
+
+                    }else {
+
+                        userService.setCompanyLogged(userService.findCompanyByName(cadetTextField.getText()));
+                    }
+
+                    userService.setIsCompany(isCompany);
                     navigation.loadScreen("Menu");
                 }
             }
@@ -109,15 +121,15 @@ public class LoginController implements Initializable {
                     verificationText.setVisible(true);
                 } else {
 
-                    if(!isCompany) {
+                    if (!isCompany) {
 
-                        userService.addCadet(new Cadet(passwordField.getText(), emailTextField.getText(), cadetTextField.getText(), mottoTexField.getText(), "cadet"));
+                        userService.addCadet(new Cadet(passwordField.getText(), emailTextField.getText(), cadetTextField.getText(), mottoTexField.getText()));
                         verificationText.setText("Account Successfully created");
                         verificationText.setVisible(true);
 
-                    }else{
+                    } else {
 
-                        userService.addCompany(new Company(passwordField.getText(), emailTextField.getText(), cadetTextField.getText(), mottoTexField.getText(), "company"));
+                        userService.addCompany(new Company(passwordField.getText(), emailTextField.getText(), cadetTextField.getText(), mottoTexField.getText()));
                         verificationText.setText("Account Successfully created");
                         verificationText.setVisible(true);
                     }
@@ -159,7 +171,7 @@ public class LoginController implements Initializable {
     void imCadet() {
 
         isCompany = false;
-        userService.setCompany(isCompany);
+        userService.setIsCompany(isCompany);
         navigation.loadScreen("LoginController");
     }
 
@@ -167,7 +179,7 @@ public class LoginController implements Initializable {
     void imCompany() {
 
         isCompany = true;
-        userService.setCompany(isCompany);
+        userService.setIsCompany(isCompany);
         navigation.loadScreen("LoginController");
 
     }

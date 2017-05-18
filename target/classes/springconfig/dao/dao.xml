@@ -1,14 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd"
 
-    <bean id="hibernateCadetDao" class="org.renato.model.dao.hibernate.HibernateCadetDao">
-        <property name="hibernateSessionManager" ref="hibernateSessionManager"/>
+        default-autowire="constructor" >
+
+    <bean id="hibernateCadetDao" class="org.renato.model.dao.hibernate.HibernateCadetDao"
+    autowire="constructor">
+        <!--<property name="hibernateSessionManager" ref="hibernateSessionManager"/>-->
     </bean>
 
-    <bean id="hibernateCompanyDao" class="org.renato.model.dao.hibernate.HibernateCompanyDao">
-        <property name="hibernateSessionManager" ref="hibernateSessionManager"/>
+    <bean id="hibernateCompanyDao" class="org.renato.model.dao.hibernate.HibernateCompanyDao"
+          autowire="constructor">
+        <!--<property name="hibernateSessionManager" ref="hibernateSessionManager"/>-->
     </bean>
 
 

@@ -10,20 +10,35 @@ import org.renato.Navigation;
 import org.renato.model.userTypes.Cadet;
 import org.renato.model.userTypes.Company;
 import org.renato.service.user.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 
 import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
 
+@Controller
 public class LogedController implements Initializable {
 
+    @Autowired
     private UserService userService;
+
+    @Autowired
     private Navigation navigation;
+
     private List<Company> companysList;
     private List<Cadet> cadetsList;
     private boolean isCompany;
-    int iterator = 0;
+    int iterator = -1;
 
+    @Autowired
+    public LogedController(UserService userService, Navigation navigation) {
+        this.userService = userService;
+        this.navigation = navigation;
+    }
+
+    public LogedController() {
+    }
 
     @FXML
     private MenuItem logout;
@@ -51,17 +66,27 @@ public class LogedController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        welcomelabel.setText("Welcome " + userService.getUserAuth());
+
+        this.isCompany = userService.getIsCompany();
         companysList = userService.getCompanies();
         cadetsList = userService.getCadets();
-        this.isCompany = navigation.getIsCompany();
 
+        if (!isCompany) {
+            welcomelabel.setText("Welcome " + userService.getCadetLogged().getName());
+
+        } else {
+
+            welcomelabel.setText("Welcome " + userService.getCompanyLogged().getName());
+
+        }
     }
 
+    @Autowired
     public void setUserService(UserService userService) {
         this.userService = userService;
     }
 
+    @Autowired
     public void setNavigation(Navigation navigation) {
         this.navigation = navigation;
     }
@@ -70,40 +95,42 @@ public class LogedController implements Initializable {
         return isCompany;
     }
 
+    @Autowired
     public void setisCompany(boolean company) {
         isCompany = company;
     }
 
     public void previous(ActionEvent actionEvent) {
 
-        //TODO check what is happening when iterator is at 0 or under
-
-        if(iterator<=0){
-            textToShow.setText("NO MORE ITEMS TO SHOW ");
-            iterator=0;
-        }
+        iterator--;
 
         if (!isCompany) {
 
-            if (iterator >= 0 && iterator < companysList.size()) {
+            if (iterator >= companysList.size()) {
+                iterator = companysList.size() - 1;
+            }
 
+            if (iterator >= 0 && iterator < companysList.size()) {
                 textToShow.setText(companysList.get(iterator).getMotto());
-                iterator--;
 
             } else {
                 textToShow.setText("NO MORE ITEMS TO SHOW ");
-                iterator = 0;
+                iterator = -1;
             }
-        }else {
+
+        } else {
+
+            if (iterator >= cadetsList.size()) {
+                iterator = cadetsList.size() - 1;
+            }
 
             if (iterator >= 0 && iterator < cadetsList.size()) {
 
                 textToShow.setText(cadetsList.get(iterator).getMotto());
-                iterator--;
 
             } else {
                 textToShow.setText("NO MORE ITEMS TO SHOW ");
-                iterator = 0;
+                iterator = -1;
             }
 
         }
@@ -112,33 +139,35 @@ public class LogedController implements Initializable {
 
     public void next(ActionEvent actionEvent) {
 
-        //TODO check what is happening when iterator is at 0 or under
-        if(iterator<=0){
-            textToShow.setText("NO MORE ITEMS TO SHOW ");
-            iterator=0;
-        }
+        iterator++;
 
         if (!isCompany) {
 
-            if (companysList.size() > iterator) {
+            if (iterator < 0) {
+                iterator = 0;
+            }
+
+            if (iterator < companysList.size()) {
 
                 textToShow.setText(companysList.get(iterator).getMotto());
-                iterator++;
-
             } else {
+
                 textToShow.setText("NO MORE ITEMS TO SHOW ");
-                iterator = 0;
+
             }
         } else {
 
-            if (cadetsList.size() > iterator) {
+            if (iterator < 0) {
+                iterator = 0;
+            }
+
+            if (iterator < cadetsList.size()) {
 
                 textToShow.setText(cadetsList.get(iterator).getMotto());
-                iterator++;
 
             } else {
                 textToShow.setText("NO MORE ITEMS TO SHOW ");
-                iterator = 0;
+
             }
 
         }
@@ -146,25 +175,45 @@ public class LogedController implements Initializable {
 
     public void moreInfo(ActionEvent actionEvent) {
 
-        if (isCompany) {
+        if (iterator >= 0) {
 
-            textToShow.setText(cadetsList.get(iterator - 1).getName());
+            if (isCompany) {
+
+                if (iterator < cadetsList.size()) {
+                    textToShow.setText(cadetsList.get(iterator).getName());
+
+                } else {
+                    textToShow.setText("NOTHING TO SHOW");
+                }
+
+            } else {
+
+                if (iterator < companysList.size()) {
+                    textToShow.setText(companysList.get(iterator).getName());
+
+                } else {
+                    textToShow.setText("NOTHING TO SHOW");
+                }
+            }
+
         } else {
-
-            textToShow.setText(cadetsList.get(iterator - 1).getName());
+            textToShow.setText("NOTHING TO SHOW");
         }
-
-
     }
 
     public void match(ActionEvent actionEvent) {
 
-        if (isCompany) {
+        if (!isCompany) {
+
+            userService.getCadetLogged().getCompanySet().add(companysList.get(iterator));
+            userService.updateCadet(userService.getCadetLogged());
 
         } else {
 
-
+            userService.getCompanyLogged().getCadetSet().add(cadetsList.get(iterator));
+            userService.updateCompany(userService.getCompanyLogged());
         }
+
 
     }
 

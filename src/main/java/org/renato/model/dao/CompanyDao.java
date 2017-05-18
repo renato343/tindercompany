@@ -15,5 +15,6 @@ public interface CompanyDao extends InterfaceDao<Company> {
 
     Company readByMail(String user);
 
-    List<Company> allCompanys();
+//    List<Company> allCompanies();
+
 }

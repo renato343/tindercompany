@@ -15,5 +15,5 @@ public interface CadetDao extends InterfaceDao<Cadet> {
 
     Cadet readByMail(String user);
 
-    List<Cadet> allCadets();
+//    List<Cadet> allCadets();
 }
