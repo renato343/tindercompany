@@ -109,6 +109,18 @@ public abstract class AbstractDao<T> implements InterfaceDao<T> {
 
     @Transactional
     @Override
+    public void updateJoinTable(Integer givenId) {
+
+        Session session = HibernateSessionManager.getSession();
+        session.beginTransaction();
+        Query query = session.createSQLQuery("UPDATE cadet_company SET "
+                + classtype.getSimpleName().toLowerCase() + "_bol = true WHERE "
+                + classtype.getSimpleName().toLowerCase() + "_id = " + givenId);
+        query.executeUpdate();
+    }
+
+    @Transactional
+    @Override
     public T readByName(String name) {
 
         Session session = HibernateSessionManager.getSession();
@@ -122,13 +134,12 @@ public abstract class AbstractDao<T> implements InterfaceDao<T> {
 
     @Transactional
     @Override
-    public List all(){
+    public List all() {
 
         Session session = getHibernateSessionManager().getSession();
         Query query = session.createQuery("from " + classtype.getSimpleName());
         List all = query.list();
         return all;
     }
-
 
 }

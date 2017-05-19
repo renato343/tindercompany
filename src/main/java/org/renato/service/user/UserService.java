@@ -43,9 +43,10 @@ public interface UserService extends Service {
 
     Company findCompanyByName(String text);
 
-    void updateCadet(Cadet cadetLogged);
+    void match(Cadet cadetLogged, Company company);
 
-    void updateCompany(Company companyLogged);
+    public void updateMatch();
 
-}
+
+    }
 

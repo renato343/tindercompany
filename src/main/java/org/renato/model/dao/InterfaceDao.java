@@ -19,5 +19,8 @@ public interface InterfaceDao<T> {
 
     void delete(T type);
 
-    public List all();
+    List all();
+
+    void updateJoinTable(Integer givenId);
+
 }

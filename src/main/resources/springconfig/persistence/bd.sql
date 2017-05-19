@@ -16,3 +16,6 @@ PRIMARY KEY (`cadet_id`, `company_id`),
 CONSTRAINT `fk_cadet` FOREIGN KEY (`cadet_id`) REFERENCES `tindercompany`.`cadets`(`id`),
 CONSTRAINT `fk_company` FOREIGN KEY (`company_id`) REFERENCES `tindercompany`.`companys`(`id`) )
 ENGINE=INNODB CHARSET=utf8;
+
+
+UPDATE cadet_company SET cadet_bol = true WHERE cadet_id = 1;

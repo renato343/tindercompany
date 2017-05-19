@@ -124,19 +124,6 @@ public class UserServiceImpl implements UserService {
 
     @Transactional
     @Override
-    public void updateCadet(Cadet cadetLogged){
-
-        cadetDao.update(cadetLogged);
-    }
-
-    @Transactional
-    @Override
-    public void updateCompany(Company companyLogged){
-        companyDao.update(companyLogged);
-    }
-
-    @Transactional
-    @Override
     public boolean exists(String name) {
 
         if (isCompany) {
@@ -189,6 +176,41 @@ public class UserServiceImpl implements UserService {
         Company userType = companyDao.readByMail(mail);
         return userType;
 
+    }
+
+    @Override
+    public void match(Cadet cadet, Company company) {
+
+        updateMatch();
+
+        if (!isCompany) {
+
+            if (cadet.getCompanySet().contains(company)) {
+                return;
+            } else {
+                cadet.getCompanySet().add(company);
+                cadetDao.update(cadet);
+            }
+        } else {
+            if (company.getCadetSet().contains(cadet)) {
+                return;
+            } else {
+                company.getCadetSet().add(cadet);
+                companyDao.update(company);
+            }
+        }
+    }
+
+    @Override
+    public void updateMatch(){
+
+        if(!isCompany){
+
+            cadetDao.updateJoinTable(1);
+        }else{
+
+            companyDao.updateJoinTable(1);
+        }
     }
 
     @Transactional

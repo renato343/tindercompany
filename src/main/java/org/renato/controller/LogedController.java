@@ -71,15 +71,8 @@ public class LogedController implements Initializable {
         companysList = userService.getCompanies();
         cadetsList = userService.getCadets();
 
-        if (!isCompany) {
-            welcomelabel.setText("Welcome " + userService.getCadetLogged().getName());
-
-        } else {
-
-            welcomelabel.setText("Welcome " + userService.getCompanyLogged().getName());
-
-        }
     }
+
 
     @Autowired
     public void setUserService(UserService userService) {
@@ -201,19 +194,16 @@ public class LogedController implements Initializable {
         }
     }
 
-    public void match(ActionEvent actionEvent) {
+    public void match(ActionEvent actionEvent){
 
-        if (!isCompany) {
+        if(!isCompany){
+            userService.match(userService.getCadetLogged(), companysList.get(iterator));
 
-            userService.getCadetLogged().getCompanySet().add(companysList.get(iterator));
-            userService.updateCadet(userService.getCadetLogged());
+        }else {
 
-        } else {
+            userService.match(cadetsList.get(iterator),userService.getCompanyLogged());
 
-            userService.getCompanyLogged().getCadetSet().add(cadetsList.get(iterator));
-            userService.updateCompany(userService.getCompanyLogged());
         }
-
 
     }
 

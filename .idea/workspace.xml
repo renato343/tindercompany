@@ -1,75 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/main/java/org/renato/controller/LogedController.java" line="177" mnemonic="8" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/java/org/renato/controller/LogedController.java" line="170" mnemonic="8" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6cca929a-1e15-4273-ac6f-768894826f54" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__hibernate_annotations_hibernate_annotations_3_3_0_GA.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/dataSources/7d6cdfa5-ae7b-4961-8913-fe07494495c5.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_6_11.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_agent_1_6_11.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_core_2_7_17.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_inline_2_7_17.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_objenesis_objenesis_2_5.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/persistence/cadet.hbm.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/persistence/company.hbm.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/persistence/hibernate.cfg.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/org/renato/service/user/CadetServiceImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/org/renato/service/user/UserService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/persistence/Cadet.hbm.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/persistence/Company.hbm.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/persistence/bd.sql" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/persistence/hibernate.cfg.xml" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/org/renato/service/user/CadetServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/org/renato/service/user/UserServiceImpl.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/persistence/bd.sql" afterPath="$PROJECT_DIR$/src/main/resources/springconfig/persistence/bd.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/renato/Navigation$1.class" afterPath="$PROJECT_DIR$/target/classes/org/renato/Navigation$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/renato/Navigation.class" afterPath="$PROJECT_DIR$/target/classes/org/renato/Navigation.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/renato/controller/LogedController.class" afterPath="$PROJECT_DIR$/target/classes/org/renato/controller/LogedController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/renato/controller/LoginController.class" afterPath="$PROJECT_DIR$/target/classes/org/renato/controller/LoginController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/renato/model/dao/AbstractDao.class" afterPath="$PROJECT_DIR$/target/classes/org/renato/model/dao/AbstractDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/renato/model/dao/CadetDao.class" afterPath="$PROJECT_DIR$/target/classes/org/renato/model/dao/CadetDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/renato/model/dao/CompanyDao.class" afterPath="$PROJECT_DIR$/target/classes/org/renato/model/dao/CompanyDao.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/renato/model/dao/InterfaceDao.class" afterPath="$PROJECT_DIR$/target/classes/org/renato/model/dao/InterfaceDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/renato/model/dao/hibernate/HibernateCadetDao.class" afterPath="$PROJECT_DIR$/target/classes/org/renato/model/dao/hibernate/HibernateCadetDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/renato/model/dao/hibernate/HibernateCompanyDao.class" afterPath="$PROJECT_DIR$/target/classes/org/renato/model/dao/hibernate/HibernateCompanyDao.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/renato/model/userTypes/Cadet.class" afterPath="$PROJECT_DIR$/target/classes/org/renato/model/userTypes/Cadet.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/renato/model/userTypes/Company.class" afterPath="$PROJECT_DIR$/target/classes/org/renato/model/userTypes/Company.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/renato/persistence/hibernate/HibernateSessionManager.class" afterPath="$PROJECT_DIR$/target/classes/org/renato/persistence/hibernate/HibernateSessionManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/renato/persistence/hibernate/HibernateTransactionManager.class" afterPath="$PROJECT_DIR$/target/classes/org/renato/persistence/hibernate/HibernateTransactionManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/renato/service/user/UserService.class" afterPath="$PROJECT_DIR$/target/classes/org/renato/service/user/UserService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/renato/service/user/UserServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/org/renato/service/user/UserServiceImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CompanyMatcher.iml" afterPath="$PROJECT_DIR$/CompanyMatcher.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/renato/Navigation.java" afterPath="$PROJECT_DIR$/src/main/java/org/renato/Navigation.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/renato/controller/LogedController.java" afterPath="$PROJECT_DIR$/src/main/java/org/renato/controller/LogedController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/renato/controller/LoginController.java" afterPath="$PROJECT_DIR$/src/main/java/org/renato/controller/LoginController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/renato/model/dao/AbstractDao.java" afterPath="$PROJECT_DIR$/src/main/java/org/renato/model/dao/AbstractDao.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/renato/model/dao/CadetDao.java" afterPath="$PROJECT_DIR$/src/main/java/org/renato/model/dao/CadetDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/renato/model/dao/CompanyDao.java" afterPath="$PROJECT_DIR$/src/main/java/org/renato/model/dao/CompanyDao.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/renato/model/dao/InterfaceDao.java" afterPath="$PROJECT_DIR$/src/main/java/org/renato/model/dao/InterfaceDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/renato/model/dao/hibernate/HibernateCadetDao.java" afterPath="$PROJECT_DIR$/src/main/java/org/renato/model/dao/hibernate/HibernateCadetDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/renato/model/dao/hibernate/HibernateCompanyDao.java" afterPath="$PROJECT_DIR$/src/main/java/org/renato/model/dao/hibernate/HibernateCompanyDao.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/renato/model/userTypes/Cadet.java" afterPath="$PROJECT_DIR$/src/main/java/org/renato/model/userTypes/Cadet.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/renato/model/userTypes/Company.java" afterPath="$PROJECT_DIR$/src/main/java/org/renato/model/userTypes/Company.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/renato/persistence/hibernate/HibernateSessionManager.java" afterPath="$PROJECT_DIR$/src/main/java/org/renato/persistence/hibernate/HibernateSessionManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/renato/persistence/hibernate/HibernateTransactionManager.java" afterPath="$PROJECT_DIR$/src/main/java/org/renato/persistence/hibernate/HibernateTransactionManager.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/renato/service/user/UserService.java" afterPath="$PROJECT_DIR$/src/main/java/org/renato/service/user/UserService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/springconfig/dao/dao.xml" afterPath="$PROJECT_DIR$/src/main/resources/springconfig/dao/dao.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/springconfig/persistence/persistence.xml" afterPath="$PROJECT_DIR$/src/main/resources/springconfig/persistence/persistence.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/springconfig/services/services.xml" afterPath="$PROJECT_DIR$/src/main/resources/springconfig/services/services.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/springconfig/singleton/navigation.xml" afterPath="$PROJECT_DIR$/src/main/resources/springconfig/singleton/navigation.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/springconfig/spring-config.xml" afterPath="$PROJECT_DIR$/src/main/resources/springconfig/spring-config.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/springconfig/dao/dao.xml" afterPath="$PROJECT_DIR$/target/classes/springconfig/dao/dao.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/springconfig/persistence/persistence.xml" afterPath="$PROJECT_DIR$/target/classes/springconfig/persistence/persistence.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/springconfig/services/services.xml" afterPath="$PROJECT_DIR$/target/classes/springconfig/services/services.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/springconfig/singleton/navigation.xml" afterPath="$PROJECT_DIR$/target/classes/springconfig/singleton/navigation.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/springconfig/spring-config.xml" afterPath="$PROJECT_DIR$/target/classes/springconfig/spring-config.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/renato/service/user/UserServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/org/renato/service/user/UserServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/springconfig/persistence/bd.sql" afterPath="$PROJECT_DIR$/src/main/resources/springconfig/persistence/bd.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/springconfig/persistence/bd.sql" afterPath="$PROJECT_DIR$/target/classes/springconfig/persistence/bd.sql" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -82,28 +34,57 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Cadet.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/renato/model/userTypes/Cadet.java">
+      <file leaf-file-name="UserServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/renato/service/user/UserServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
-              <caret line="36" column="0" lean-forward="true" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+            <state relative-caret-position="168">
+              <caret line="183" column="22" lean-forward="false" selection-start-line="183" selection-start-column="22" selection-end-line="183" selection-end-column="22" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#Cadet#0;class#Cadet#0" expanded="false" />
-                <element signature="method#Cadet#1;class#Cadet#0" expanded="false" />
+                <element signature="method#UserServiceImpl#0;class#UserServiceImpl#0" expanded="false" />
+                <element signature="method#authenticate#0;class#UserServiceImpl#0" expanded="false" />
+                <element signature="method#addCadet#0;class#UserServiceImpl#0" expanded="false" />
+                <element signature="method#addCompany#0;class#UserServiceImpl#0" expanded="false" />
+                <element signature="method#exists#0;class#UserServiceImpl#0" expanded="false" />
+                <element signature="method#findCadetByName#0;class#UserServiceImpl#0" expanded="false" />
+                <element signature="method#findCadetByMail#0;class#UserServiceImpl#0" expanded="false" />
+                <element signature="method#findCompanyByMail#0;class#UserServiceImpl#0" expanded="false" />
+                <element signature="method#getCompanies#0;class#UserServiceImpl#0" expanded="false" />
+                <element signature="method#getCadets#0;class#UserServiceImpl#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Company.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/renato/model/userTypes/Company.java">
+      <file leaf-file-name="LogedController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/renato/controller/LogedController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="35" column="36" lean-forward="false" selection-start-line="35" selection-start-column="36" selection-end-line="35" selection-end-column="36" />
+            <state relative-caret-position="218">
+              <caret line="196" column="47" lean-forward="true" selection-start-line="196" selection-start-column="47" selection-end-line="196" selection-end-column="47" />
               <folding>
-                <element signature="method#Company#0;class#Company#0" expanded="false" />
-                <element signature="method#Company#1;class#Company#0" expanded="false" />
+                <element signature="method#LogedController#0;class#LogedController#0" expanded="false" />
+                <element signature="method#LogedController#1;class#LogedController#0" expanded="false" />
+                <element signature="method#previous#0;class#LogedController#0" expanded="false" />
+                <element signature="method#next#0;class#LogedController#0" expanded="false" />
+                <element signature="method#moreInfo#0;class#LogedController#0" expanded="false" />
+                <element signature="method#quit#0;class#LogedController#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AbstractDao.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/renato/model/dao/AbstractDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="59">
+              <caret line="114" column="35" lean-forward="true" selection-start-line="114" selection-start-column="35" selection-end-line="114" selection-end-column="35" />
+              <folding>
+                <element signature="method#AbstractDao#0;class#AbstractDao#0" expanded="false" />
+                <element signature="method#setHibernateSessionManager#0;class#AbstractDao#0" expanded="false" />
+                <element signature="method#getName#0;class#AbstractDao#0" expanded="false" />
+                <element signature="method#create#0;class#AbstractDao#0" expanded="false" />
+                <element signature="method#update#0;class#AbstractDao#0" expanded="false" />
+                <element signature="method#delete#0;class#AbstractDao#0" expanded="false" />
+                <element signature="method#all#0;class#AbstractDao#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -137,19 +118,20 @@
         <option value="$PROJECT_DIR$/src/main/resources/view/Menu.fxml" />
         <option value="$PROJECT_DIR$/src/main/java/org/renato/Navigation.java" />
         <option value="$PROJECT_DIR$/src/main/resources/springconfig/singleton/navigation.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/org/renato/model/dao/InterfaceDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/renato/model/dao/CadetDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/renato/model/dao/CompanyDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/renato/controller/LoginController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/renato/controller/LogedController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/renato/service/user/UserService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/renato/service/user/UserServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/renato/model/dao/hibernate/HibernateCadetDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/renato/model/dao/hibernate/HibernateCompanyDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/renato/model/dao/CadetDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/renato/controller/LoginController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/springconfig/persistence/bd.sql" />
+        <option value="$PROJECT_DIR$/src/main/java/org/renato/model/dao/InterfaceDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/renato/service/user/UserService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/renato/service/user/UserServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/renato/model/dao/AbstractDao.java" />
         <option value="$PROJECT_DIR$/src/main/resources/springconfig/persistence/persistence.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/org/renato/model/userTypes/Company.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/renato/model/userTypes/Cadet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/renato/model/userTypes/Company.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/renato/controller/LogedController.java" />
       </list>
     </option>
   </component>
@@ -189,8 +171,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="width" value="1366" />
-    <option name="height" value="728" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -481,6 +465,48 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CompanyMatcher" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tindercompany_test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="renato" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hibernate" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -851,24 +877,25 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1366" height="728" extended-state="1" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3277311" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32569557" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32994187" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.74285716" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2831424" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3277311" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13935682" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31996974" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -918,7 +945,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="12" />
+      <option name="time" value="19" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1077,14 +1104,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/springconfig/dao/dao.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/springconfig/spring-config.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -1101,16 +1120,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/renato/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="18" column="59" lean-forward="false" selection-start-line="18" selection-start-column="59" selection-end-line="18" selection-end-column="59" />
-          <folding>
-            <element signature="method#start#0;class#Main#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-core/5.1.0.Final/hibernate-core-5.1.0.Final-sources.jar!/org/hibernate/Session.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="339">
@@ -1119,78 +1128,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/renato/model/dao/InterfaceDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="21" column="22" lean-forward="true" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/renato/model/dao/CompanyDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="18" column="4" lean-forward="true" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/renato/model/dao/CadetDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/renato/controller/LoginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="109">
-          <caret line="94" column="0" lean-forward="true" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
-          <folding>
-            <element signature="method#LoginController#0;class#LoginController#0" expanded="false" />
-            <element signature="method#LoginController#1;class#LoginController#0" expanded="false" />
-            <element signature="method#onRegister#0;class#LoginController#0" expanded="false" />
-            <element signature="method#imCadet#0;class#LoginController#0" expanded="false" />
-            <element signature="method#imCompany#0;class#LoginController#0" expanded="false" />
-            <element signature="method#initialize#0;class#LoginController#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/renato/service/user/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="48" column="0" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/renato/service/user/UserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="133" column="0" lean-forward="false" selection-start-line="133" selection-start-column="0" selection-end-line="133" selection-end-column="0" />
-          <folding>
-            <element signature="method#UserServiceImpl#0;class#UserServiceImpl#0" expanded="false" />
-            <element signature="method#authenticate#0;class#UserServiceImpl#0" expanded="false" />
-            <element signature="method#addCadet#0;class#UserServiceImpl#0" expanded="false" />
-            <element signature="method#addCompany#0;class#UserServiceImpl#0" expanded="false" />
-            <element signature="method#updateCadet#0;class#UserServiceImpl#0" expanded="false" />
-            <element signature="method#exists#0;class#UserServiceImpl#0" expanded="false" />
-            <element signature="method#findCadetByName#0;class#UserServiceImpl#0" expanded="false" />
-            <element signature="e#3709#3710#0" expanded="true" />
-            <element signature="method#findCadetByMail#0;class#UserServiceImpl#0" expanded="false" />
-            <element signature="method#findCompanyByMail#0;class#UserServiceImpl#0" expanded="false" />
-            <element signature="method#getCompanies#0;class#UserServiceImpl#0" expanded="false" />
-            <element signature="method#getCadets#0;class#UserServiceImpl#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/renato/model/dao/hibernate/HibernateCadetDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="24" column="4" lean-forward="false" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="4" />
           <folding />
         </state>
       </provider>
@@ -1205,44 +1146,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/springconfig/persistence/persistence.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="36" column="63" lean-forward="false" selection-start-line="36" selection-start-column="63" selection-end-line="36" selection-end-column="63" />
-          <folding>
-            <element signature="n#bean#0;n#beans#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/renato/model/dao/AbstractDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="69" column="0" lean-forward="true" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#AbstractDao#0;class#AbstractDao#0" expanded="false" />
-            <element signature="method#setHibernateSessionManager#0;class#AbstractDao#0" expanded="false" />
-            <element signature="method#getName#0;class#AbstractDao#0" expanded="false" />
-            <element signature="method#delete#0;class#AbstractDao#0" expanded="false" />
-            <element signature="method#readByMail#0;class#AbstractDao#0" expanded="false" />
-            <element signature="method#readByName#0;class#AbstractDao#0" expanded="false" />
-            <element signature="method#all#0;class#AbstractDao#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/renato/model/userTypes/Company.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="35" column="36" lean-forward="false" selection-start-line="35" selection-start-column="36" selection-end-line="35" selection-end-column="36" />
-          <folding>
-            <element signature="method#Company#0;class#Company#0" expanded="false" />
-            <element signature="method#Company#1;class#Company#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/mysql/mysql-connector-java/5.1.41/mysql-connector-java-5.1.41-sources.jar!/com/mysql/jdbc/SQLError.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="59">
@@ -1251,14 +1154,239 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/renato/model/dao/CadetDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="11" column="21" lean-forward="true" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/renato/model/dao/hibernate/HibernateCadetDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="18" column="7" lean-forward="false" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/springconfig/dao/dao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-core/5.1.0.Final/hibernate-core-5.1.0.Final-sources.jar!/org/hibernate/SharedSessionContract.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="60" column="17" lean-forward="false" selection-start-line="60" selection-start-column="17" selection-end-line="60" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/4.2.5.RELEASE/spring-aop-4.2.5.RELEASE-sources.jar!/org/springframework/aop/target/SingletonTargetSource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="64" column="0" lean-forward="false" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
+          <folding>
+            <element signature="e#2096#2097#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/4.2.5.RELEASE/spring-aop-4.2.5.RELEASE-sources.jar!/org/springframework/aop/framework/DefaultAdvisorChainFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="93" column="0" lean-forward="false" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
+          <folding>
+            <element signature="e#2016#2024#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/4.2.5.RELEASE/spring-aop-4.2.5.RELEASE-sources.jar!/org/springframework/aop/framework/AdvisedSupport.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="139">
+          <caret line="492" column="0" lean-forward="false" selection-start-line="492" selection-start-column="0" selection-end-line="492" selection-end-column="0" />
+          <folding>
+            <element signature="e#7617#7618#0" expanded="false" />
+            <element signature="e#7648#7649#0" expanded="false" />
+            <element signature="e#18135#18136#0" expanded="false" />
+            <element signature="e#18164#18165#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/4.2.5.RELEASE/spring-aop-4.2.5.RELEASE-sources.jar!/org/springframework/aop/framework/AopProxyUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="197" column="0" lean-forward="false" selection-start-line="197" selection-start-column="0" selection-end-line="197" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/4.2.5.RELEASE/spring-aop-4.2.5.RELEASE-sources.jar!/org/springframework/aop/framework/JdkDynamicAopProxy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="201" column="0" lean-forward="false" selection-start-line="201" selection-start-column="0" selection-end-line="201" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/4.2.5.RELEASE/spring-core-4.2.5.RELEASE-sources.jar!/org/springframework/util/ReflectionUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="458" column="0" lean-forward="false" selection-start-line="458" selection-start-column="0" selection-end-line="458" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-core/5.1.0.Final/hibernate-core-5.1.0.Final-sources.jar!/org/hibernate/collection/internal/AbstractPersistentCollection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="174" column="0" lean-forward="false" selection-start-line="174" selection-start-column="0" selection-end-line="174" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-core/5.1.0.Final/hibernate-core-5.1.0.Final-sources.jar!/org/hibernate/collection/internal/PersistentSet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="142" column="0" lean-forward="false" selection-start-line="142" selection-start-column="0" selection-end-line="142" selection-end-column="0" />
+          <folding>
+            <element signature="e#4278#4279#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/4.2.5.RELEASE/spring-aop-4.2.5.RELEASE-sources.jar!/org/springframework/aop/support/AopUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="301" column="0" lean-forward="false" selection-start-line="301" selection-start-column="0" selection-end-line="301" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/util/Set.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-90">
+          <caret line="127" column="16" lean-forward="false" selection-start-line="127" selection-start-column="16" selection-end-line="127" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/renato/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="18" column="59" lean-forward="false" selection-start-line="18" selection-start-column="59" selection-end-line="18" selection-end-column="59" />
+          <folding>
+            <element signature="method#start#0;class#Main#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/springconfig/persistence/bd.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/renato/model/dao/InterfaceDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="9" lean-forward="false" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/renato/service/user/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="436">
+          <caret line="47" column="30" lean-forward="false" selection-start-line="47" selection-start-column="30" selection-end-line="47" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/renato/controller/LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="466">
+          <caret line="99" column="0" lean-forward="true" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
+          <folding>
+            <element signature="method#LoginController#0;class#LoginController#0" expanded="false" />
+            <element signature="method#LoginController#1;class#LoginController#0" expanded="false" />
+            <element signature="method#onRegister#0;class#LoginController#0" expanded="false" />
+            <element signature="method#imCadet#0;class#LoginController#0" expanded="false" />
+            <element signature="method#imCompany#0;class#LoginController#0" expanded="false" />
+            <element signature="method#initialize#0;class#LoginController#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/renato/service/user/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="183" column="22" lean-forward="false" selection-start-line="183" selection-start-column="22" selection-end-line="183" selection-end-column="22" />
+          <folding>
+            <element signature="method#UserServiceImpl#0;class#UserServiceImpl#0" expanded="false" />
+            <element signature="method#authenticate#0;class#UserServiceImpl#0" expanded="false" />
+            <element signature="method#addCadet#0;class#UserServiceImpl#0" expanded="false" />
+            <element signature="method#addCompany#0;class#UserServiceImpl#0" expanded="false" />
+            <element signature="method#exists#0;class#UserServiceImpl#0" expanded="false" />
+            <element signature="method#findCadetByName#0;class#UserServiceImpl#0" expanded="false" />
+            <element signature="method#findCadetByMail#0;class#UserServiceImpl#0" expanded="false" />
+            <element signature="method#findCompanyByMail#0;class#UserServiceImpl#0" expanded="false" />
+            <element signature="method#getCompanies#0;class#UserServiceImpl#0" expanded="false" />
+            <element signature="method#getCadets#0;class#UserServiceImpl#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/springconfig/persistence/persistence.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="44" column="51" lean-forward="false" selection-start-line="44" selection-start-column="51" selection-end-line="44" selection-end-column="51" />
+          <folding>
+            <element signature="n#bean#0;n#beans#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/renato/model/userTypes/Cadet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="32" column="34" lean-forward="false" selection-start-line="32" selection-start-column="34" selection-end-line="32" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#Cadet#0;class#Cadet#0" expanded="false" />
+            <element signature="method#Cadet#1;class#Cadet#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/renato/model/userTypes/Company.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="86">
+          <caret line="33" column="34" lean-forward="false" selection-start-line="33" selection-start-column="34" selection-end-line="33" selection-end-column="34" />
+          <folding>
+            <element signature="method#Company#0;class#Company#0" expanded="false" />
+            <element signature="method#Company#1;class#Company#0" expanded="false" />
+            <element signature="e#1149#1150#0" expanded="true" />
+            <element signature="e#1182#1183#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/renato/controller/LogedController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="208" column="62" lean-forward="false" selection-start-line="208" selection-start-column="48" selection-end-line="208" selection-end-column="62" />
+        <state relative-caret-position="218">
+          <caret line="196" column="47" lean-forward="true" selection-start-line="196" selection-start-column="47" selection-end-line="196" selection-end-column="47" />
           <folding>
             <element signature="method#LogedController#0;class#LogedController#0" expanded="false" />
             <element signature="method#LogedController#1;class#LogedController#0" expanded="false" />
-            <element signature="method#initialize#0;class#LogedController#0" expanded="false" />
             <element signature="method#previous#0;class#LogedController#0" expanded="false" />
             <element signature="method#next#0;class#LogedController#0" expanded="false" />
             <element signature="method#moreInfo#0;class#LogedController#0" expanded="false" />
@@ -1267,14 +1395,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/renato/model/userTypes/Cadet.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/renato/model/dao/AbstractDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="36" column="0" lean-forward="true" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+        <state relative-caret-position="59">
+          <caret line="114" column="35" lean-forward="true" selection-start-line="114" selection-start-column="35" selection-end-line="114" selection-end-column="35" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#Cadet#0;class#Cadet#0" expanded="false" />
-            <element signature="method#Cadet#1;class#Cadet#0" expanded="false" />
+            <element signature="method#AbstractDao#0;class#AbstractDao#0" expanded="false" />
+            <element signature="method#setHibernateSessionManager#0;class#AbstractDao#0" expanded="false" />
+            <element signature="method#getName#0;class#AbstractDao#0" expanded="false" />
+            <element signature="method#create#0;class#AbstractDao#0" expanded="false" />
+            <element signature="method#update#0;class#AbstractDao#0" expanded="false" />
+            <element signature="method#delete#0;class#AbstractDao#0" expanded="false" />
+            <element signature="method#all#0;class#AbstractDao#0" expanded="false" />
           </folding>
         </state>
       </provider>

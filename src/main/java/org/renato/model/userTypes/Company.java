@@ -32,8 +32,9 @@ public class Company {
     private String motto;
 
     /**List with companys liked**/
+
     @ManyToMany (targetEntity = Cadet.class, fetch = FetchType.EAGER)
-    @JoinTable(name = "cadet_company", joinColumns = {@JoinColumn(name = "company_id")}, inverseJoinColumns = {@JoinColumn(name = "cadet_id")})
+    @JoinTable(name = "cadet_company", joinColumns = {@JoinColumn(name = "company_id")},inverseJoinColumns = {@JoinColumn(name = "cadet_id")})
     private Set<Cadet> cadetSet;
 
     public Company() {
@@ -93,4 +94,5 @@ public class Company {
     public void setCadetSet(Set<Cadet> cadetSet) {
         this.cadetSet = cadetSet;
     }
+
 }
