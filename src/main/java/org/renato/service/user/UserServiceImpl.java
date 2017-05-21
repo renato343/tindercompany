@@ -2,8 +2,10 @@ package org.renato.service.user;
 
 import org.renato.model.dao.CadetDao;
 import org.renato.model.dao.CompanyDao;
-import org.renato.model.userTypes.Cadet;
-import org.renato.model.userTypes.Company;
+import org.renato.model.dao.MatchDao;
+import org.renato.model.pojos.Candidate;
+import org.renato.model.pojos.Company;
+import org.renato.model.pojos.Match;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -23,7 +25,10 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private CompanyDao companyDao;
 
-    private Cadet cadetLogged;
+    @Autowired
+    private MatchDao matchDao;
+
+    private Candidate candidateLogged;
     private Company companyLogged;
     private String userAuth;
 
@@ -32,12 +37,14 @@ public class UserServiceImpl implements UserService {
 
     private List companies;
     private List cadets;
+    private List matches;
 
 
     @Autowired
-    public UserServiceImpl(CadetDao cadetDao, CompanyDao companyDao) {
+    public UserServiceImpl(CadetDao cadetDao, CompanyDao companyDao, MatchDao matchDao) {
         this.cadetDao = cadetDao;
         this.companyDao = companyDao;
+        this.matchDao = matchDao;
     }
 
     @Override
@@ -45,12 +52,12 @@ public class UserServiceImpl implements UserService {
         return UserService.class.getSimpleName();
     }
 
-    public Cadet getCadetLogged() {
-        return cadetLogged;
+    public Candidate getCandidateLogged() {
+        return candidateLogged;
     }
 
-    public void setCadetLogged(Cadet cadetLogged) {
-        this.cadetLogged = cadetLogged;
+    public void setCandidateLogged(Candidate candidateLogged) {
+        this.candidateLogged = candidateLogged;
     }
 
     public Company getCompanyLogged() {
@@ -102,7 +109,7 @@ public class UserServiceImpl implements UserService {
 
     @Transactional
     @Override
-    public void addCadet(Cadet userType) {
+    public void addCadet(Candidate userType) {
 
         if (cadetDao.readByMail(userType.getEmail()) == null) {
             cadetDao.create(userType);
@@ -149,7 +156,7 @@ public class UserServiceImpl implements UserService {
 
     @Transactional
     @Override
-    public Cadet findCadetByName(String text) {
+    public Candidate findCadetByName(String text) {
 
         return cadetDao.readByName(text);
     }
@@ -162,9 +169,9 @@ public class UserServiceImpl implements UserService {
 
     @Transactional
     @Override
-    public Cadet findCadetByMail(String mail) {
+    public Candidate findCadetByMail(String mail) {
 
-        Cadet userType = cadetDao.readByMail(mail);
+        Candidate userType = cadetDao.readByMail(mail);
         return userType;
 
     }
@@ -179,37 +186,64 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public void match(Cadet cadet, Company company) {
+    public void match(Candidate candidate, Company company) {
 
-        updateMatch();
+        Match match = checkMatch(candidate, company);
 
-        if (!isCompany) {
+        if (match == null) {
 
-            if (cadet.getCompanySet().contains(company)) {
-                return;
-            } else {
-                cadet.getCompanySet().add(company);
-                cadetDao.update(cadet);
+            if(!isCompany) {
+                match = new Match(candidate.getCadet_Id(), company.getCompany_id(), true, false);
+                matchDao.create(match);
+            }else {
+                match = new Match(candidate.getCadet_Id(),company.getCompany_id(),false,true);
+                matchDao.create(match);
             }
+
         } else {
-            if (company.getCadetSet().contains(cadet)) {
-                return;
+
+            if (!isCompany) {
+                match.setCandidate_bol(true);
+                matchDao.update(match);
             } else {
-                company.getCadetSet().add(cadet);
-                companyDao.update(company);
+                match.setCompany_bol(true);
+                matchDao.update(match);
             }
+
         }
+
     }
 
     @Override
-    public void updateMatch(){
+    public Match checkMatch(Candidate candidate, Company company) {
+
+        Match match = null;
+
+        for (int i = 0; i < matches.size(); i++) {
+            match = (Match) matches.get(i);
+            if (match.getCandidate_id() == candidate.getCadet_Id() &&
+                    match.getCompany_id() == company.getCompany_id()) {
+                break;
+            }
+        }
+        return match;
+    }
+
+    public Match checkMyMatches(){
 
         if(!isCompany){
 
-            cadetDao.updateJoinTable(1);
-        }else{
+            matches.forEach((renato ->{
+                if(candidateLogged.getCadet_Id() == matches.get(renato)))
+            })
 
-            companyDao.updateJoinTable(1);
+            items.forEach(item->{
+                if("C".equals(item)){
+                    System.out.println(item);
+                }
+            });
+
+            }
         }
     }
 
@@ -218,7 +252,6 @@ public class UserServiceImpl implements UserService {
     public List getCompanies() {
 
         companies = companyDao.all();
-//        companies = companyDao.allCompanies();
         return companies;
     }
 
@@ -227,10 +260,15 @@ public class UserServiceImpl implements UserService {
     public List getCadets() {
 
         cadets = cadetDao.all();
-
-//        cadets = cadetDao.allCadets();
         return cadets;
     }
 
+    @Transactional
+    @Override
+    public List getMatches() {
+
+        matches = matchDao.all();
+        return matches;
+    }
 
 }

@@ -1,7 +1,7 @@
 package org.renato.utils.session;
 
 import org.renato.model.dao.CadetDao;
-import org.renato.model.userTypes.Cadet;
+import org.renato.model.pojos.Candidate;
 import org.renato.persistence.TransactionManager;
 
 /**
@@ -25,7 +25,7 @@ public class SessionServiceImplementation implements SessionService {
 
         tx.beginTransaction();
 
-        Cadet userType = cadetDao.readByName(userName);
+        Candidate userType = cadetDao.readByName(userName);
 
         return false;
     }

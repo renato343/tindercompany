@@ -4,7 +4,6 @@ import org.hibernate.HibernateException;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.TransactionException;
-import org.renato.model.userTypes.Cadet;
 import org.renato.persistence.hibernate.HibernateSessionManager;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -105,18 +104,6 @@ public abstract class AbstractDao<T> implements InterfaceDao<T> {
         T object = (T) query.uniqueResult();
         return object;
 
-    }
-
-    @Transactional
-    @Override
-    public void updateJoinTable(Integer givenId) {
-
-        Session session = HibernateSessionManager.getSession();
-        session.beginTransaction();
-        Query query = session.createSQLQuery("UPDATE cadet_company SET "
-                + classtype.getSimpleName().toLowerCase() + "_bol = true WHERE "
-                + classtype.getSimpleName().toLowerCase() + "_id = " + givenId);
-        query.executeUpdate();
     }
 
     @Transactional

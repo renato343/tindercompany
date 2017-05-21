@@ -1,8 +1,6 @@
-package org.renato.model.userTypes;
+package org.renato.model.pojos;
 
 import javax.persistence.*;
-import java.io.File;
-import java.util.Set;
 
 /**
  * Created by Renato on 25/03/17.
@@ -11,6 +9,7 @@ import java.util.Set;
 @Entity
 @Table(name = "companys")
 public class Company {
+
 
     @Id
     @Column(name = "company_id")
@@ -26,16 +25,8 @@ public class Company {
     @Column(name = "password")
     private String password;
 
-    /** phrase to describe */
-
     @Column (name = "motto")
     private String motto;
-
-    /**List with companys liked**/
-
-    @ManyToMany (targetEntity = Cadet.class, fetch = FetchType.EAGER)
-    @JoinTable(name = "cadet_company", joinColumns = {@JoinColumn(name = "company_id")},inverseJoinColumns = {@JoinColumn(name = "cadet_id")})
-    private Set<Cadet> cadetSet;
 
     public Company() {
     }
@@ -55,6 +46,7 @@ public class Company {
         this.company_id = company_id;
     }
 
+
     public String getPassword() {
         return password;
     }
@@ -62,6 +54,7 @@ public class Company {
     public void setPassword(String password) {
         this.password = password;
     }
+
 
     public String getEmail() {
         return email;
@@ -71,6 +64,7 @@ public class Company {
         this.email = email;
     }
 
+
     public String getName() {
         return name;
     }
@@ -79,20 +73,13 @@ public class Company {
         this.name = name;
     }
 
+
     public String getMotto() {
         return motto;
     }
 
     public void setMotto(String motto) {
         this.motto = motto;
-    }
-
-    public Set<Cadet> getCadetSet() {
-        return cadetSet;
-    }
-
-    public void setCadetSet(Set<Cadet> cadetSet) {
-        this.cadetSet = cadetSet;
     }
 
 }

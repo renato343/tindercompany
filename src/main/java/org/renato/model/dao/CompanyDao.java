@@ -1,8 +1,6 @@
 package org.renato.model.dao;
 
-import org.renato.model.userTypes.Company;
-
-import java.util.List;
+import org.renato.model.pojos.Company;
 
 /**
  * Created by Renato on 25/03/17.

@@ -7,8 +7,9 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.MenuItem;
 import org.renato.Navigation;
-import org.renato.model.userTypes.Cadet;
-import org.renato.model.userTypes.Company;
+import org.renato.model.pojos.Candidate;
+import org.renato.model.pojos.Company;
+import org.renato.model.pojos.Match;
 import org.renato.service.user.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -27,7 +28,8 @@ public class LogedController implements Initializable {
     private Navigation navigation;
 
     private List<Company> companysList;
-    private List<Cadet> cadetsList;
+    private List<Candidate> candidates;
+    private List<Match> matches;
     private boolean isCompany;
     int iterator = -1;
 
@@ -69,7 +71,11 @@ public class LogedController implements Initializable {
 
         this.isCompany = userService.getIsCompany();
         companysList = userService.getCompanies();
-        cadetsList = userService.getCadets();
+        candidates = userService.getCadets();
+        matches = userService.getMatches();
+        if(userService.checkMatch(userService.getCandidateLogged(), ))
+        }
+
 
     }
 
@@ -113,13 +119,13 @@ public class LogedController implements Initializable {
 
         } else {
 
-            if (iterator >= cadetsList.size()) {
-                iterator = cadetsList.size() - 1;
+            if (iterator >= candidates.size()) {
+                iterator = candidates.size() - 1;
             }
 
-            if (iterator >= 0 && iterator < cadetsList.size()) {
+            if (iterator >= 0 && iterator < candidates.size()) {
 
-                textToShow.setText(cadetsList.get(iterator).getMotto());
+                textToShow.setText(candidates.get(iterator).getMotto());
 
             } else {
                 textToShow.setText("NO MORE ITEMS TO SHOW ");
@@ -154,9 +160,9 @@ public class LogedController implements Initializable {
                 iterator = 0;
             }
 
-            if (iterator < cadetsList.size()) {
+            if (iterator < candidates.size()) {
 
-                textToShow.setText(cadetsList.get(iterator).getMotto());
+                textToShow.setText(candidates.get(iterator).getMotto());
 
             } else {
                 textToShow.setText("NO MORE ITEMS TO SHOW ");
@@ -172,8 +178,8 @@ public class LogedController implements Initializable {
 
             if (isCompany) {
 
-                if (iterator < cadetsList.size()) {
-                    textToShow.setText(cadetsList.get(iterator).getName());
+                if (iterator < candidates.size()) {
+                    textToShow.setText(candidates.get(iterator).getName());
 
                 } else {
                     textToShow.setText("NOTHING TO SHOW");
@@ -197,17 +203,19 @@ public class LogedController implements Initializable {
     public void match(ActionEvent actionEvent){
 
         if(!isCompany){
-            userService.match(userService.getCadetLogged(), companysList.get(iterator));
+
+            userService.match(userService.getCandidateLogged(), companysList.get(iterator));
 
         }else {
 
-            userService.match(cadetsList.get(iterator),userService.getCompanyLogged());
+            userService.match(candidates.get(iterator),userService.getCompanyLogged());
 
         }
 
     }
 
     public void logout(ActionEvent actionEvent) {
+        iterator = -1;
         navigation.loadScreen("first");
     }
 

@@ -21,6 +21,4 @@ public interface InterfaceDao<T> {
 
     List all();
 
-    void updateJoinTable(Integer givenId);
-
 }

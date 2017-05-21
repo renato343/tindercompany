@@ -16,6 +16,11 @@
         <!--<property name="hibernateSessionManager" ref="hibernateSessionManager"/>-->
     </bean>
 
+    <bean id="hibernateMatchDao" class="org.renato.model.dao.hibernate.HibernateMatchDao"
+          autowire="constructor">
+        <!--<property name="hibernateSessionManager" ref="hibernateSessionManager"/>-->
+    </bean>
+
 
 </beans>
 

@@ -1,7 +1,8 @@
 package org.renato.service.user;
 
-import org.renato.model.userTypes.Cadet;
-import org.renato.model.userTypes.Company;
+import org.renato.model.pojos.Candidate;
+import org.renato.model.pojos.Company;
+import org.renato.model.pojos.Match;
 import org.renato.service.Service;
 
 import java.util.List;
@@ -11,9 +12,9 @@ import java.util.List;
  */
 public interface UserService extends Service {
 
-    public Cadet getCadetLogged();
+    public Candidate getCandidateLogged();
 
-    public void setCadetLogged(Cadet cadetLogged);
+    public void setCandidateLogged(Candidate candidateLogged);
 
     public Company getCompanyLogged();
 
@@ -25,13 +26,13 @@ public interface UserService extends Service {
 
     boolean authenticate(String name, String pass);
 
-    void addCadet(Cadet userType);
+    void addCadet(Candidate userType);
 
     void addCompany(Company userType);
 
     boolean exists(String name);
 
-    Cadet findCadetByMail(String name);
+    Candidate findCadetByMail(String name);
 
     Company findCompanyByMail(String mail);
 
@@ -39,13 +40,15 @@ public interface UserService extends Service {
 
     List getCadets();
 
-    Cadet findCadetByName(String text);
+    Candidate findCadetByName(String text);
 
     Company findCompanyByName(String text);
 
-    void match(Cadet cadetLogged, Company company);
+    void match(Candidate candidateLogged, Company company);
 
-    public void updateMatch();
+    Match checkMatch(Candidate candidate, Company company);
+
+    List getMatches();
 
 
     }

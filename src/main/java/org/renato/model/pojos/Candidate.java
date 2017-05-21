@@ -1,7 +1,7 @@
-package org.renato.model.userTypes;
+package org.renato.model.pojos;
 
 import javax.persistence.*;
-import java.util.Set;
+
 
 /**
  * Created by Renato on 25/03/17.
@@ -9,7 +9,8 @@ import java.util.Set;
 
 @Entity
 @Table(name = "cadets")
-public class Cadet  {
+public class Candidate {
+
 
     @Id
     @Column(name = "cadet_id")
@@ -25,25 +26,13 @@ public class Cadet  {
     @Column(name = "password")
     private String password;
 
-    /** phrase to describe */
-
     @Column (name = "motto")
     private String motto;
 
-    /**List with companys liked**/
-    @ManyToMany (targetEntity = Company.class, fetch = FetchType.EAGER)
-    @JoinTable(name = "cadet_company", joinColumns = {@JoinColumn(name = "cadet_id")}, inverseJoinColumns = {@JoinColumn(name = "company_id")})
-    private Set<Company> companySet;
-
-//    /**List with companys liked**/
-//    @ManyToMany (targetEntity = Company.class, fetch = FetchType.EAGER)
-//    @JoinTable(name = "cadet_company", joinColumns = {@JoinColumn(name = "cadet_id")}, inverseJoinColumns = {@JoinColumn(name = "company_id")})
-//    private Set<Company> companySet;
-
-    public Cadet() {
+    public Candidate() {
     }
 
-    public Cadet(String password, String email, String name, String motto) {
+    public Candidate(String password, String email, String name, String motto) {
         this.password = password;
         this.email = email;
         this.name = name;
@@ -58,6 +47,7 @@ public class Cadet  {
         this.cadet_Id = cadet_Id;
     }
 
+
     public String getPassword() {
         return password;
     }
@@ -65,6 +55,7 @@ public class Cadet  {
     public void setPassword(String password) {
         this.password = password;
     }
+
 
     public String getEmail() {
         return email;
@@ -74,6 +65,7 @@ public class Cadet  {
         this.email = email;
     }
 
+
     public String getName() {
         return name;
     }
@@ -82,20 +74,13 @@ public class Cadet  {
         this.name = name;
     }
 
+
     public String getMotto() {
         return motto;
     }
 
     public void setMotto(String motto) {
         this.motto = motto;
-    }
-
-    public Set<Company> getCompanySet() {
-        return companySet;
-    }
-
-    public void setCompanySet(Set<Company> companySet) {
-        this.companySet = companySet;
     }
 
 }

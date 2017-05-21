@@ -2,7 +2,9 @@ package org.renato.model.dao.hibernate;
 
 import org.renato.model.dao.AbstractDao;
 import org.renato.model.dao.CompanyDao;
+import org.renato.model.dao.MatchDao;
 import org.renato.model.pojos.Company;
+import org.renato.model.pojos.Match;
 import org.springframework.stereotype.Component;
 
 /**
@@ -11,10 +13,10 @@ import org.springframework.stereotype.Component;
  */
 
 @Component
-public class HibernateCompanyDao extends AbstractDao<Company> implements CompanyDao {
+public class HibernateMatchDao extends AbstractDao<Match> implements MatchDao {
 
-    public HibernateCompanyDao() {
-        super(Company.class);
+    public HibernateMatchDao() {
+        super(Match.class);
     }
 
 

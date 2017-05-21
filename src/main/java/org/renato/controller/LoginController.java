@@ -5,8 +5,8 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import org.renato.Navigation;
-import org.renato.model.userTypes.Cadet;
-import org.renato.model.userTypes.Company;
+import org.renato.model.pojos.Candidate;
+import org.renato.model.pojos.Company;
 import org.renato.service.user.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -98,7 +98,7 @@ public class LoginController implements Initializable {
 
                     if(!isCompany){
 
-                        userService.setCadetLogged(userService.findCadetByName(cadetTextField.getText()));
+                        userService.setCandidateLogged(userService.findCadetByName(cadetTextField.getText()));
 
                     }else {
 
@@ -123,7 +123,7 @@ public class LoginController implements Initializable {
 
                     if (!isCompany) {
 
-                        userService.addCadet(new Cadet(passwordField.getText(), emailTextField.getText(), cadetTextField.getText(), mottoTexField.getText()));
+                        userService.addCadet(new Candidate(passwordField.getText(), emailTextField.getText(), cadetTextField.getText(), mottoTexField.getText()));
                         verificationText.setText("Account Successfully created");
                         verificationText.setVisible(true);
 
@@ -194,7 +194,7 @@ public class LoginController implements Initializable {
 
             } else {
 
-                entityTypeLabel.setText("Cadet");
+                entityTypeLabel.setText("Candidate");
 
             }
         }
