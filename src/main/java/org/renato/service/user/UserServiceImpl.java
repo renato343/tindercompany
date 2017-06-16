@@ -192,11 +192,11 @@ public class UserServiceImpl implements UserService {
 
         if (match == null) {
 
-            if(!isCompany) {
+            if (!isCompany) {
                 match = new Match(candidate.getCadet_Id(), company.getCompany_id(), true, false);
                 matchDao.create(match);
-            }else {
-                match = new Match(candidate.getCadet_Id(),company.getCompany_id(),false,true);
+            } else {
+                match = new Match(candidate.getCadet_Id(), company.getCompany_id(), false, true);
                 matchDao.create(match);
             }
 
@@ -209,7 +209,6 @@ public class UserServiceImpl implements UserService {
                 match.setCompany_bol(true);
                 matchDao.update(match);
             }
-
         }
 
     }
@@ -227,24 +226,6 @@ public class UserServiceImpl implements UserService {
             }
         }
         return match;
-    }
-
-    public Match checkMyMatches(){
-
-        if(!isCompany){
-
-            matches.forEach((renato ->{
-                if(candidateLogged.getCadet_Id() == matches.get(renato)))
-            })
-
-            items.forEach(item->{
-                if("C".equals(item)){
-                    System.out.println(item);
-                }
-            });
-
-            }
-        }
     }
 
     @Transactional

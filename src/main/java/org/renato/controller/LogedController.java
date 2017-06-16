@@ -73,9 +73,6 @@ public class LogedController implements Initializable {
         companysList = userService.getCompanies();
         candidates = userService.getCadets();
         matches = userService.getMatches();
-        if(userService.checkMatch(userService.getCandidateLogged(), ))
-        }
-
 
     }
 
@@ -200,16 +197,49 @@ public class LogedController implements Initializable {
         }
     }
 
-    public void match(ActionEvent actionEvent){
+    public void match(ActionEvent actionEvent) {
 
-        if(!isCompany){
+        if (!isCompany) {
 
-            userService.match(userService.getCandidateLogged(), companysList.get(iterator));
+            Match match = userService.checkMatch(userService.getCandidateLogged(), companysList.get(iterator));
 
-        }else {
+            if (match == null) {
 
-            userService.match(candidates.get(iterator),userService.getCompanyLogged());
+                userService.match(userService.getCandidateLogged(), companysList.get(iterator));
 
+            } else {
+
+
+                if (match.isCandidate_bol() && match.isCompany_bol()) {
+
+                    textToShow.setText("YOU'VE GOT A MATCH");
+
+                } else {
+
+                    userService.match(userService.getCandidateLogged(), companysList.get(iterator));
+                }
+            }
+
+        } else {
+
+            Match match = userService.checkMatch(candidates.get(iterator), userService.getCompanyLogged());
+
+            if (match == null) {
+
+                userService.match(userService.getCandidateLogged(), companysList.get(iterator));
+
+            } else {
+
+                if (match.isCandidate_bol() && match.isCompany_bol()) {
+
+                    textToShow.setText("YOU'VE GOT A MATCH WITH ");
+
+                } else {
+
+                    userService.match(candidates.get(iterator), userService.getCompanyLogged());
+
+                }
+            }
         }
 
     }

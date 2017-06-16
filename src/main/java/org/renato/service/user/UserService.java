@@ -50,6 +50,5 @@ public interface UserService extends Service {
 
     List getMatches();
 
-
-    }
+}
 
