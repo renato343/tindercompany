@@ -10,7 +10,9 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 /**
  * Created by Renato on 18/03/17.
  */
-public class   Main extends Application {
+public class Main extends Application {
+
+    //updated version
 
     HibernateSessionManager hibernateSessionManager;
 
