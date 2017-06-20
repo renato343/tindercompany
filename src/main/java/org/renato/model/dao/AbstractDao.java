@@ -18,7 +18,7 @@ import java.util.List;
 public abstract class AbstractDao<T> implements InterfaceDao<T> {
 
     @Autowired
-    HibernateSessionManager hibernateSessionManager;
+    public HibernateSessionManager hibernateSessionManager;
     Class<T> classtype;
 
 
@@ -52,7 +52,7 @@ public abstract class AbstractDao<T> implements InterfaceDao<T> {
         try {
 
             Session session = hibernateSessionManager.getSession();
-            session.saveOrUpdate(type);
+            session.save(type);
 
         } catch (HibernateException ex) {
 
@@ -97,7 +97,7 @@ public abstract class AbstractDao<T> implements InterfaceDao<T> {
     @Override
     public T readByMail(String email) {
 
-        Session session = HibernateSessionManager.getSession();
+        Session session = hibernateSessionManager.getSession();
         session.beginTransaction();
         Query query = session.createQuery("from " + classtype.getSimpleName() + " where email = :email");
         query.setString("email", email);
@@ -110,7 +110,7 @@ public abstract class AbstractDao<T> implements InterfaceDao<T> {
     @Override
     public T readByName(String name) {
 
-        Session session = HibernateSessionManager.getSession();
+        Session session = hibernateSessionManager.getSession();
         session.beginTransaction();
         Query query = session.createQuery("from " + classtype.getSimpleName() + " where name = :name");
         query.setString("name", name);
@@ -123,10 +123,12 @@ public abstract class AbstractDao<T> implements InterfaceDao<T> {
     @Override
     public List all() {
 
-        Session session = getHibernateSessionManager().getSession();
+        Session session = hibernateSessionManager.getSession();
         Query query = session.createQuery("from " + classtype.getSimpleName());
         List all = query.list();
         return all;
     }
+
+
 
 }

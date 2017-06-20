@@ -1,5 +1,6 @@
 package org.renato.model.dao;
 
+import org.renato.model.pojos.Candidate;
 import org.renato.model.pojos.Company;
 import org.renato.model.pojos.Match;
 
@@ -14,5 +15,5 @@ public interface MatchDao extends InterfaceDao<org.renato.model.pojos.Match> {
 
     Match readByMail(String user);
 
-
+    Match getmatch(Candidate candidate, Company company);
 }

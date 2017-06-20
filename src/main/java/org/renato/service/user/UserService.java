@@ -12,17 +12,17 @@ import java.util.List;
  */
 public interface UserService extends Service {
 
-    public Candidate getCandidateLogged();
+    Candidate getCandidateLogged();
 
-    public void setCandidateLogged(Candidate candidateLogged);
+    void setCandidateLogged(Candidate candidateLogged);
 
-    public Company getCompanyLogged();
+    Company getCompanyLogged();
 
-    public void setCompanyLogged(Company companyLogged);
+    void setCompanyLogged(Company companyLogged);
 
-    public boolean getIsCompany();
+    boolean getIsCompany();
 
-    public void setIsCompany(boolean company);
+    void setIsCompany(boolean company);
 
     boolean authenticate(String name, String pass);
 
@@ -35,6 +35,8 @@ public interface UserService extends Service {
     Candidate findCadetByMail(String name);
 
     Company findCompanyByMail(String mail);
+
+    void updateMatch(Match match);
 
     List getCompanies();
 

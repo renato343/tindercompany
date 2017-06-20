@@ -186,46 +186,34 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public void match(Candidate candidate, Company company) {
+    public Match checkMatch(Candidate candidate, Company company) {
 
-        Match match = checkMatch(candidate, company);
-
-        if (match == null) {
-
-            if (!isCompany) {
-                match = new Match(candidate.getCadet_Id(), company.getCompany_id(), true, false);
-                matchDao.create(match);
-            } else {
-                match = new Match(candidate.getCadet_Id(), company.getCompany_id(), false, true);
-                matchDao.create(match);
-            }
-
-        } else {
-
-            if (!isCompany) {
-                match.setCandidate_bol(true);
-                matchDao.update(match);
-            } else {
-                match.setCompany_bol(true);
-                matchDao.update(match);
-            }
-        }
+        return matchDao.getmatch(candidate, company);
 
     }
 
     @Override
-    public Match checkMatch(Candidate candidate, Company company) {
+    public void match(Candidate candidate, Company company) {
 
-        Match match = null;
-
-        for (int i = 0; i < matches.size(); i++) {
-            match = (Match) matches.get(i);
-            if (match.getCandidate_id() == candidate.getCadet_Id() &&
-                    match.getCompany_id() == company.getCompany_id()) {
-                break;
+            if (!isCompany) {
+                Match match = new Match(candidate.getCadet_Id(), company.getCompany_id(), true, false);
+                matchDao.create(match);
+            } else {
+                Match match = new Match(candidate.getCadet_Id(), company.getCompany_id(), false, true);
+                matchDao.create(match);
             }
+    }
+
+    @Override
+    public void updateMatch(Match match){
+
+        if (!isCompany) {
+            match.setCandidate_bol(true);
+            matchDao.update(match);
+        } else {
+            match.setCompany_bol(true);
+            matchDao.update(match);
         }
-        return match;
     }
 
     @Transactional

@@ -12,7 +12,7 @@
         <property name="driverClass" value="com.mysql.jdbc.Driver"/>
         <property name="jdbcUrl" value="jdbc:mysql://localhost:3306/tindercompany"/>
         <property name="user" value="root"/>
-        <property name="password" value=""/>
+        <property name="password" value="pass"/>
 
         <!-- c3p0 database connection pool management properties -->
         <property name="minPoolSize" value="1"/>

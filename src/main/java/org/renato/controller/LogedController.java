@@ -42,26 +42,26 @@ public class LogedController implements Initializable {
     public LogedController() {
     }
 
-    @FXML
-    private MenuItem logout;
-
-    @FXML
-    private MenuItem quit;
-
-    @FXML
-    private Label welcomelabel;
-
-    @FXML
-    private Button previousButton;
-
-    @FXML
-    private Button nextButton;
-
-    @FXML
-    private Button moreInfoButton;
-
-    @FXML
-    private Button matchButton;
+//    @FXML
+//    private MenuItem logout;
+//
+//    @FXML
+//    private MenuItem quit;
+//
+//    @FXML
+//    private Label welcomelabel;
+//
+//    @FXML
+//    private Button previousButton;
+//
+//    @FXML
+//    private Button nextButton;
+//
+//    @FXML
+//    private Button moreInfoButton;
+//
+//    @FXML
+//    private Button matchButton;
 
     @FXML
     private Label textToShow;
@@ -75,7 +75,6 @@ public class LogedController implements Initializable {
         matches = userService.getMatches();
 
     }
-
 
     @Autowired
     public void setUserService(UserService userService) {
@@ -209,33 +208,28 @@ public class LogedController implements Initializable {
 
             } else {
 
-
-                if (match.isCandidate_bol() && match.isCompany_bol()) {
-
+                if (match.isCompany_bol()) {
                     textToShow.setText("YOU'VE GOT A MATCH");
 
                 } else {
-
-                    userService.match(userService.getCandidateLogged(), companysList.get(iterator));
+                    userService.updateMatch(match);
                 }
             }
 
         } else {
 
+
             Match match = userService.checkMatch(candidates.get(iterator), userService.getCompanyLogged());
 
             if (match == null) {
-
-                userService.match(userService.getCandidateLogged(), companysList.get(iterator));
+                userService.match(candidates.get(iterator), userService.getCompanyLogged());
 
             } else {
 
-                if (match.isCandidate_bol() && match.isCompany_bol()) {
-
+                if (match.isCandidate_bol()) {
                     textToShow.setText("YOU'VE GOT A MATCH WITH ");
 
                 } else {
-
                     userService.match(candidates.get(iterator), userService.getCompanyLogged());
 
                 }
